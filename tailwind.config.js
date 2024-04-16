@@ -8,7 +8,9 @@ module.exports = {
       colors:{
            "deep-blue":"#0B3954",
            "bit-blue": "#087E8B",
-           "deep-nude": "#FF5A5F"
+           "deep-nude": "#FF5A5F",
+           "nav-blue": "#055CC5",
+           "foot-blue": "#029CF6"
       },
     },
   },
