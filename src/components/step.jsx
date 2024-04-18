@@ -5,7 +5,7 @@ import hospital from "../assets/hospital.png";
 
 export default function Steps(){
     return(
-        <div class=" dark:bg-gray-800 py-16 ">
+        <div class=" border rounded-md dark:bg-gray-800 py-16 ">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           <div class="mx-auto max-w-7xl sm:text-center mb-14">
             <p class="mt-2 text-3xl font-bold tracking-tight  sm:text-4xl">How it works</p>

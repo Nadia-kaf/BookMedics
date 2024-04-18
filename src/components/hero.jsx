@@ -15,14 +15,14 @@ export default function Hero() {
       <div className="mx-auto ml-36 mt-40">
         <h1 className="text-5xl text-white">
           Consultation with the{" "}
-          <span className="text-gray-700 font-semibold ">best doctors</span>
+          <span className="text-gray-700 font-semibold  ">best doctors</span>
         </h1>
         <br />
         <h1 className="text-4xl text-white">Just a click away</h1>
         <p className="mt-2 text-white">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit.
         </p>
-        <button className="mt-10 border rounded-xl bg-gray-700 text-white p-2">
+        <button className="mt-10 border rounded-xl bg-blue-800 border-blue-800 text-white p-2 animate-pulse">
           Book appointment
         </button>
       </div>
