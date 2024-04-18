@@ -8,6 +8,9 @@ import {
   TabPanel,
 } from "@material-tailwind/react";
 import Footer from "../components/footer";
+import Overview from "../components/overview";
+import Review from "../components/review";
+import Location from "../components/location";
  
 
 export default function Profile(){
@@ -17,22 +20,17 @@ export default function Profile(){
     {
       label: "Overview",
       value: "overview",
-      desc: `It really matters and then like it really doesn't matter.
-      What matters is the people who are sparked by it. And the people 
-      who are like offended by it, it doesn't matter.`,
+      desc: <Overview/>
     },
     {
       label: "Location",
       value: "react",
-      desc: `Because it's about motivating the doers. Because I'm here
-      to follow my dreams and inspire other people to follow their dreams, too.`,
+      desc: <Location/>,
     },
     {
       label: "Reviews",
       value: "vue",
-      desc: `We're not always in the position that we want to be at.
-      We're constantly growing. We're constantly making mistakes. We're
-      constantly trying to express ourselves and actualize our dreams.`,
+      desc: <Review/>
     },
     {
       label: "Business hours",
