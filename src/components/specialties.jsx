@@ -44,7 +44,7 @@ export default function Specialties() {
         </div>
 
         <div class="relative mx-auto max-w-7xl z-10 grid grid-cols-1 gap-10 pt-14 sm:grid-cols-2 lg:grid-cols-3">
-          <div class="rounded-md border border-neutral-800  p-5 text-center shadow" style={{backgroundImage: `linear-gradient(45deg, rgba(0, 0, 255, 0.6), rgba(0, 0, 255, 0.5)), url(${oral})`, backgroundRepeat: "no-repeat", backgroundPosition: "center",objectPosition: 'fit', backgroundSize: "500px 300px"}}>
+          <div class="rounded-md border border-neutral-800  p-5 text-center shadow" style={{backgroundImage:   `linear-gradient( rgba(0, 0, 255, 0.3), rgba(0, 0, 255, 0.4)),url(${oral})`, backgroundRepeat: "no-repeat", backgroundPosition: "center",objectPosition: 'fit', backgroundSize: "500px 300px"}}>
             <div
               class="button-text mx-auto flex h-20 w-20 items-center justify-center"
             >
@@ -53,7 +53,7 @@ export default function Specialties() {
             <h3 class="mt-6 text-gray-100 text-3xl font-semibold">Dental</h3>
           </div>
 
-          <div class="rounded-md border border-neutral-800  p-8 text-center shadow"  style={{backgroundImage: `linear-gradient(45deg, rgba(0, 0, 255, 0.6), rgba(0, 0, 255, 0.5)), url(${orthopaedic})`, backgroundRepeat: "no-repeat", backgroundPosition: "center",objectPosition: 'fit', backgroundSize: "500px 300px"}}>
+          <div class="rounded-md border border-neutral-800  p-8 text-center shadow"  style={{backgroundImage: `linear-gradient( rgba(0, 0, 255, 0.3), rgba(0, 0, 255, 0.4)), url(${orthopaedic})`, backgroundRepeat: "no-repeat", backgroundPosition: "center",objectPosition: 'fit', backgroundSize: "500px 300px"}}>
             <div
               class="button-text mx-auto flex h-20 w-20 items-center justify-center "
               
@@ -62,7 +62,7 @@ export default function Specialties() {
             </div>
             <h3 class="mt-6 text-gray-100 text-3xl font-semibold">Orthopaedic</h3>
           </div>
-          <div class="rounded-md border border-neutral-800  p-8 text-center shadow" style={{backgroundImage: `linear-gradient(45deg, rgba(0, 0, 255, 0.6), rgba(0, 0, 255, 0.5)), url(${heart})`, backgroundRepeat: "no-repeat", backgroundPosition: "center",objectPosition: 'fit', backgroundSize: "500px 300px",}}>
+          <div class="rounded-md border border-neutral-800  p-8 text-center shadow" style={{backgroundImage: `linear-gradient( rgba(0, 0, 255, 0.3), rgba(0, 0, 255, 0.4)), url(${heart})`, backgroundRepeat: "no-repeat", backgroundPosition: "center",objectPosition: 'fit', backgroundSize: "500px 300px",}}>
             <div
               class="button-text mx-auto flex h-20 w-20 items-center justify-center bg-white rounded-md "
             >
