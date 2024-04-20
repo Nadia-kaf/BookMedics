@@ -9,7 +9,8 @@ import SignUpH from './pages/signupH';
 import SearchServices from './components/searchS';
 import Profile from './pages/profile';
 import Dashboard from './pages/dashboard';
-import DashboardC from './components/dashboardC';
+import AppointD from './pages/appointmentD';
+import AvailableSlots from './pages/available-slots';
 
 
 const router= createBrowserRouter([
@@ -20,8 +21,9 @@ const router= createBrowserRouter([
 {path:'/signupH', element: <SignUpH/>},
 {path:'/searchS', element: <SearchServices/>},
 {path:'/profile', element: <Profile/>},
-{path:'/dashboard', element: <Dashboard/>},
-{path:'/dashboardC', element: <DashboardC/>}
+{path:'/doctor/dashboard', element: <Dashboard/>},
+{path:'/doctor/appointment', element: <AppointD/>},
+{path:'/doctor/available-slot', element: <AvailableSlots/>}
 ])
 
 function App() {

@@ -1,30 +1,8 @@
-import dashpic from "../assets/dashpic.jpg";
-import {
-  Tabs,
-  TabsHeader,
-  TabsBody,
-  Tab,
-  TabPanel,
-} from "@material-tailwind/react";
-import React from "react";
 
-export default function Dashboard() {
 
-  const [activeTab, setActiveTab] = React.useState("html");
-  const data = [
-    {
-      label: "Revenue",
-      value: "chart",
-      desc: `Because it's about motivating the doers. Because I'm here
-      to follow my dreams and inspire other people to follow their dreams, too.`,
-    },
-    {
-      label: "Appointments",
-      value: "data",
-      desc: `lorem`,
-    },
-  ];
+export default function AppointD() {
 
+ 
   return (
     <>
       <link
@@ -33,8 +11,7 @@ export default function Dashboard() {
       />
 
       <div className=" min-h-screen">
-        <div className=" text-4xl flex justify-center mt-10">DASHBOARD</div>
-        <div className="flex flex-row pt-24 px-10 pb-4">
+        <div className="flex flex-row  px-10 pb-4">
           <div className="w-2/12 mr-6">
             <div className="bg-white rounded-xl shadow-lg mb-6 px-6 py-4">
               <div className="border-b-2">
@@ -129,126 +106,20 @@ export default function Dashboard() {
             </div>
           </div>
           {/* <!-- Tab Content --> */}
-
-          <div class="w-10/12">
-            <div class="flex flex-row h-40 mt-6">
-              <div class="bg-white rounded-xl shadow-lg px-6 py-4 w-4/12">
-                a
-              </div>
-              <div class="bg-white rounded-xl shadow-lg mx-6 px-6 py-4 w-4/12">
-                b
-              </div>
-              <div class="bg-white rounded-xl shadow-lg px-6 py-4 w-4/12">
-                c
-              </div>
-            </div>
-            <div class="flex flex-row mt-5">
-              <div
-                class="bg-no-repeat  border  rounded-xl w-7/12 mr-2 p-6"
-                style={{
-                  backgroundImage: `url(${dashpic})`,
-                  backgroundPosition: "contain",
-                  backgroundSize: "700px 350px",
-                }}
-              >
-                <p class=" text-white">Upcoming Appointment</p>
-                <div className="flex mt-10">
-                  <div className="ml-10">
-                    <img src="" alt="" className="w-6 h-6 " />
-                  </div>
-                  <div className="ml-8 text-white">
-                    <h5>#000001</h5>
-                    <h3>Akua Danso</h3>
-                  </div>
-                  <div className="ml-60 text-white font-semibold">
-                    <h3>Dental Visit</h3>
-                    <h2 className="text-xl">Today,9:30 AM</h2>
-                  </div>
-                </div>
-                <hr className="mt-10" />
-                <span class="bg-white text-xl text-bit-blue inline-block rounded-full mt-12 px-8 py-2">
-                  <strong>Start appointment</strong>
-                </span>
-              </div>
-
-              <div
-                class="bg-no-repeat  border border-gray-500 rounded-xl w-5/12 ml-2 p-6"
-                style={{
-                  backgroundImage:
-                    "url(https://previews.dropbox.com/p/thumb/AAuwpqWfUgs9aC5lRoM_f-yi7OPV4txbpW1makBEj5l21sDbEGYsrC9sb6bwUFXTSsekeka5xb7_IHCdyM4p9XCUaoUjpaTSlKK99S_k4L5PIspjqKkiWoaUYiAeQIdnaUvZJlgAGVUEJoy-1PA9i6Jj0GHQTrF_h9MVEnCyPQ-kg4_p7kZ8Yk0TMTL7XDx4jGJFkz75geOdOklKT3GqY9U9JtxxvRRyo1Un8hOObbWQBS1eYE-MowAI5rNqHCE_e-44yXKY6AKJocLPXz_U4xp87K4mVGehFKC6dgk_i5Ur7gspuD7gRBDvd0sanJ9Ybr_6s2hZhrpad-2WFwWqSNkh/p.png?fv_content=true&size_mode=5)",
-                  backgroundPosition: " 100% 40%",
-                }}
-              >
-                <div className="flex">
-                  <p class="text-xl text-indigo-900">Recent Patients</p>
-                  <p className="ml-44 text-bit-blue underline">View all</p>
-                </div>
-                <hr className="mt-3" />
-
-                <div className="grid grid-cols-2 gap-2 mt-10">
-                  <div>
-                    <img src="" alt="" className="w-6 h-6" />
-                    <h2>Name</h2>
-                    <p>Patient ID</p>
-                    <hr className="w-40" />
-                    <p className="mt-5">Last appointment:</p>
-                    <p>5 Mar 2024</p>
-                  </div>
-                  <div>
-                    <img src="" alt="" className="w-6 h-6" />
-                    <h2>Name</h2>
-                    <p>Patient ID</p>
-                    <hr className="w-40" />
-                    <p className="mt-5">Last appointment:</p>
-                    <p>5 Mar 2024</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="flex flex-row mt-5">
-              <div class="bg-no-repeat  border border-gray-500 rounded-xl w-5/12 mr-2 p-6 ">
-                <div className="">
-                  <p class="text-xl text-indigo-900">Weekly Overview</p>
-                  <p className="mt-5">April 15 - April 29</p>
-                </div>
-                <Tabs value={activeTab}>
-                  <TabsHeader
-                    className="rounded-none border-b border-blue-gray-50 bg-transparent p-0 mt-10 "
-                    indicatorProps={{
-                      className:
-                        "bg-transparent border-b-2 border-gray-900 shadow-none rounded-none",
-                    }}
-                  >
-                    {data.map(({ label, value }) => (
-                      <Tab
-                        key={value}
-                        value={value}
-                        onClick={() => setActiveTab(value)}
-                        className={activeTab === value ? "text-gray-900" : ""}
-                      >
-                        {label}
-                      </Tab>
-                    ))}
-                  </TabsHeader>
-                  <TabsBody>
-                    {data.map(({ value, desc }) => (
-                      <TabPanel key={value} value={value}>
-                        {desc}
-                      </TabPanel>
-                    ))}
-                  </TabsBody>
-                </Tabs>
-              </div>
-              <div
-                class="bg-no-repeat  border  rounded-xl w-7/12 ml-2 p-6"
-               
-              >
-                   <div className="flex">
-                  <p class="text-xl text-indigo-900">Appointment</p>
-                  <p className="ml-64 text-bit-blue border p-3">Last 7 days</p>
-                </div>
-                <hr className="mt-3" />              
-                  <div className="grid grid-cols-4 mt-5">
+        <div className="mt-20">
+           <div className="flex">
+            <h2>Appointment</h2>
+            <input type="search" placeholder="search" className="ml-96" />
+           </div>
+           <hr />
+           <div className="flex mt-3">
+             <button className="border rounded-xl bg-bit-blue text-white p-2">upcoming <span className="border rounded-full p-1 bg-white font-bold text-black">21</span></button>
+             <button className="ml-10 border rounded-xl bg-bit-blue text-white p-2">cancelled <span className="border rounded-full p-1 bg-white text-black font-bold">4</span></button>
+             <button className="ml-10 border rounded-xl bg-bit-blue text-white p-2">completed <span className="border rounded-full p-1 bg-white font-bold text-black">214</span></button>
+           </div>
+           
+           <h1>Filter and calendar</h1>
+           <div className="grid grid-cols-4 mt-5 border rounded-xl shadow p-4">
                   <div className="ml-10">
                     <img src="" alt="" className="w-6 h-6 " />
                   </div>
@@ -265,7 +136,7 @@ export default function Dashboard() {
                     <h2 className="ml-4 border rounded-full border-red-200 p-2">2</h2></div>
                   </div>
                 </div>
-                  <div className="grid grid-cols-4 mt-5">
+           <div className="grid grid-cols-4 mt-5 border rounded-xl shadow p-4">
                   <div className="ml-10">
                     <img src="" alt="" className="w-6 h-6 " />
                   </div>
@@ -282,7 +153,7 @@ export default function Dashboard() {
                     <h2 className="ml-4 border rounded-full border-red-200 p-2">2</h2></div>
                   </div>
                 </div>
-                  <div className="grid grid-cols-4 mt-5">
+           <div className="grid grid-cols-4 mt-5 border rounded-xl shadow p-4">
                   <div className="ml-10">
                     <img src="" alt="" className="w-6 h-6 " />
                   </div>
@@ -299,7 +170,7 @@ export default function Dashboard() {
                     <h2 className="ml-4 border rounded-full border-red-200 p-2">2</h2></div>
                   </div>
                 </div>
-                  <div className="grid grid-cols-4 mt-5">
+           <div className="grid grid-cols-4 mt-5 border rounded-xl shadow p-4">
                   <div className="ml-10">
                     <img src="" alt="" className="w-6 h-6 " />
                   </div>
@@ -316,7 +187,7 @@ export default function Dashboard() {
                     <h2 className="ml-4 border rounded-full border-red-200 p-2">2</h2></div>
                   </div>
                 </div>
-                  <div className="grid grid-cols-4 mt-5">
+           <div className="grid grid-cols-4 mt-5 border rounded-xl shadow p-4">
                   <div className="ml-10">
                     <img src="" alt="" className="w-6 h-6 " />
                   </div>
@@ -333,11 +204,25 @@ export default function Dashboard() {
                     <h2 className="ml-4 border rounded-full border-red-200 p-2">2</h2></div>
                   </div>
                 </div>
-               
-              </div>
-            </div>
-          </div>
+           <div className="grid grid-cols-4 mt-5 border rounded-xl shadow p-4">
+                  <div className="ml-10">
+                    <img src="" alt="" className="w-6 h-6 " />
+                  </div>
+                  <div className="mr-3 ">
+                    <h5>#000001</h5>
+                    <h3>Akua Danso</h3>
+                  </div>
+                  <div className="mr-1 font-semibold">
+                    <h3>11 April 2024 10:00 AM</h3>
+                  </div>
+                  <div className="ml-20 font-semibold">
+                    <div className="flex">
+                      <h3 className="border rounded-full border-green-200 p-2">1</h3>
+                    <h2 className="ml-4 border rounded-full border-red-200 p-2">2</h2></div>
+                  </div>
+                </div>
         </div>
+    </div>
       </div>
     </>
   );
