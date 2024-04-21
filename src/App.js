@@ -11,6 +11,8 @@ import Profile from './pages/profile';
 import Dashboard from './pages/dashboard';
 import AppointD from './pages/appointmentD';
 import AvailableSlots from './pages/available-slots';
+import DocPatient from './pages/mypatients';
+import Pdashboard from './pages/pdashboard';
 
 
 const router= createBrowserRouter([
@@ -23,7 +25,9 @@ const router= createBrowserRouter([
 {path:'/profile', element: <Profile/>},
 {path:'/doctor/dashboard', element: <Dashboard/>},
 {path:'/doctor/appointment', element: <AppointD/>},
-{path:'/doctor/available-slot', element: <AvailableSlots/>}
+{path:'/doctor/available-slot', element: <AvailableSlots/>},
+{path:'/doctor/patients', element: <DocPatient/>},
+{path:'/patient/dashboard', element: <Pdashboard/>}
 ])
 
 function App() {

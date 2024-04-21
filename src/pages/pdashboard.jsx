@@ -1,29 +1,25 @@
-import dashpic from "../assets/dashpic.jpg";
-import {
-  Tabs,
-  TabsHeader,
-  TabsBody,
-  Tab,
-  TabPanel,
-} from "@material-tailwind/react";
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+
 import React from "react";
+import { Doughnut } from "react-chartjs-2";
 
-export default function Dashboard() {
+ChartJS.register(ArcElement, Tooltip, Legend);
 
-  const [activeTab, setActiveTab] = React.useState("html");
-  const data = [
-    {
-      label: "Revenue",
-      value: "chart",
-      desc: `Because it's about motivating the doers. Because I'm here
-      to follow my dreams and inspire other people to follow their dreams, too.`,
-    },
-    {
-      label: "Appointments",
-      value: "data",
-      desc: `lorem`,
-    },
-  ];
+export default function Pdashboard() {
+  const data = {
+    datasets: [
+      {
+        label: "Poll",
+        data: [6, 3],
+        backgroundColor: ["green", "white"],
+        borderColor: ["green", "black"],
+      },
+    ],
+  };
+
+  const options={
+
+  }
 
   return (
     <>
@@ -39,8 +35,9 @@ export default function Dashboard() {
             <div className="bg-white rounded-xl shadow-lg mb-6 px-6 py-4">
               <div className="border-b-2">
                 <h1 className="border rounded-full p-10 my-10">image</h1>
-                <p>Dr. Book Medics</p>
-                <p className="py-2">Gyanaecologist</p>
+                <p>Adwoa Aikins</p>
+                <p className="py-2">Patient ID: 0001</p>
+                <p className="py-2">Age: 30|Female</p>
               </div>
               <a
                 href="/doctor/dashboard"
@@ -55,29 +52,18 @@ export default function Dashboard() {
                 </span>
               </a>
               <a
-                href="/doctor/appointment"
+                href="/patient/appointment"
                 className="inline-block text-gray-600 hover:text-black my-4 w-full"
               >
                 <span className="material-icons-outlined float-left pr-2">
                   schedule
                 </span>
-                Appointment{" "}
+                My Appointment{" "}
                 <span className="material-icons-outlined float-right">
                   keyboard_arrow_right
                 </span>
               </a>
-              <a
-                href="/doctor/patients"
-                className="inline-block text-gray-600 hover:text-black my-4 w-full"
-              >
-                <span className="material-icons-outlined float-left pr-2">
-                  face
-                </span>
-                My Patients
-                <span className="material-icons-outlined float-right">
-                  keyboard_arrow_right
-                </span>
-              </a>
+
               <a
                 href="/doctor/available-slot"
                 className="inline-block text-gray-600 hover:text-black my-4 w-full"
@@ -85,7 +71,7 @@ export default function Dashboard() {
                 <span className="material-icons-outlined float-left pr-2">
                   schedule
                 </span>
-                Available slots
+                Invoice
                 <span className="material-icons-outlined float-right">
                   keyboard_arrow_right
                 </span>
@@ -98,18 +84,6 @@ export default function Dashboard() {
                   settings
                 </span>
                 Settings
-                <span className="material-icons-outlined float-right">
-                  keyboard_arrow_right
-                </span>
-              </a>
-              <a
-                href=""
-                className="inline-block text-gray-600 hover:text-black my-4 w-full"
-              >
-                <span className="material-icons-outlined float-left pr-2">
-                  chat
-                </span>
-                Reviews{" "}
                 <span className="material-icons-outlined float-right">
                   keyboard_arrow_right
                 </span>
@@ -130,39 +104,52 @@ export default function Dashboard() {
           </div>
           {/* <!-- Tab Content --> */}
 
-          <div class="w-10/12">
-            <div class="flex flex-row h-40 mt-6">
-              <div class="bg-white rounded-xl shadow-lg px-6 py-4 w-4/12">
-                a
-              </div>
-              <div class="bg-white rounded-xl shadow-lg mx-6 px-6 py-4 w-4/12">
-                b
-              </div>
-              <div class="bg-white rounded-xl shadow-lg px-6 py-4 w-4/12">
-                c
-              </div>
+          <div class="w-8/12 bg-white rounded-xl shadow-lg px-6 py-4">
+            <div class="mt-6">
+              <h1>DASHBOARD</h1>
+              <hr />
             </div>
             <div class="flex flex-row mt-5">
-              <div
-                class="bg-no-repeat  border  rounded-xl w-7/12 mr-2 p-6"
-                style={{
-                  backgroundImage: `url(${dashpic})`,
-                  backgroundPosition: "contain",
-                  backgroundSize: "700px 350px",
-                }}
-              >
-                <p class=" text-white">Upcoming Appointment</p>
-                <div className="flex mt-10">
-                  <div className="ml-10">
-                    <img src="" alt="" className="w-6 h-6 " />
+              <div class="bg-no-repeat  border  rounded-xl w-7/12 mr-2 p-6">
+                <div className="grid grid-cols-3 mt-10">
+                  <div className="">
+                    <p className="text-sm ">Heart Rate</p>
+                    <h2>
+                      140 Bpm <sup>2%</sup>{" "}
+                    </h2>
+
+                    <p className="text-sm mt-5">Glucose level</p>
+                    <h2>
+                      70 - 90 <sup>6%</sup>
+                    </h2>
+                    <p className="text-sm mt-5">Blood Pressure</p>
+                    <h2>
+                      100 mg/dl <sup>2%</sup>
+                    </h2>
                   </div>
-                  <div className="ml-8 text-white">
-                    <h5>#000001</h5>
-                    <h3>Akua Danso</h3>
+                  <div className=" ">
+                    <h5 className="text-sm">Body Temperature</h5>
+                    <h3>
+                      37.5 <sup>o</sup>C
+                    </h3>
+
+                    <p className="text-sm mt-5">SPo2</p>
+                    <h2>92%</h2>
+                    <p className="text-sm mt-5">BMI</p>
+                    <h2>
+                      42.1 kg/m <sup>2</sup>{" "}
+                    </h2>
                   </div>
-                  <div className="ml-60 text-white font-semibold">
-                    <h3>Dental Visit</h3>
-                    <h2 className="text-xl">Today,9:30 AM</h2>
+                  <div className=" font-semibold border-l-2">
+                    <h3>Overall report</h3>
+                    <div className="">
+                      <Doughnut
+                        data={data}
+                        options={options}
+                        className="w-20 h-20"
+                      />
+                    </div>
+                    <h3>Your health is 95% normal</h3>
                   </div>
                 </div>
                 <hr className="mt-10" />
@@ -211,44 +198,14 @@ export default function Dashboard() {
                   <p class="text-xl text-indigo-900">Weekly Overview</p>
                   <p className="mt-5">April 15 - April 29</p>
                 </div>
-                <Tabs value={activeTab}>
-                  <TabsHeader
-                    className="rounded-none border-b border-blue-gray-50 bg-transparent p-0 mt-10 "
-                    indicatorProps={{
-                      className:
-                        "bg-transparent border-b-2 border-gray-900 shadow-none rounded-none",
-                    }}
-                  >
-                    {data.map(({ label, value }) => (
-                      <Tab
-                        key={value}
-                        value={value}
-                        onClick={() => setActiveTab(value)}
-                        className={activeTab === value ? "text-gray-900" : ""}
-                      >
-                        {label}
-                      </Tab>
-                    ))}
-                  </TabsHeader>
-                  <TabsBody>
-                    {data.map(({ value, desc }) => (
-                      <TabPanel key={value} value={value}>
-                        {desc}
-                      </TabPanel>
-                    ))}
-                  </TabsBody>
-                </Tabs>
               </div>
-              <div
-                class="bg-no-repeat  border  rounded-xl w-7/12 ml-2 p-6"
-               
-              >
-                   <div className="flex">
+              <div class="bg-no-repeat  border  rounded-xl w-7/12 ml-2 p-6">
+                <div className="flex">
                   <p class="text-xl text-indigo-900">Appointment</p>
                   <p className="ml-64 text-bit-blue border p-3">Last 7 days</p>
                 </div>
-                <hr className="mt-3" />              
-                  <div className="grid grid-cols-4 mt-5">
+                <hr className="mt-3" />
+                <div className="grid grid-cols-4 mt-5">
                   <div className="ml-10">
                     <img src="" alt="" className="w-6 h-6 " />
                   </div>
@@ -261,11 +218,16 @@ export default function Dashboard() {
                   </div>
                   <div className="ml-20 font-semibold">
                     <div className="flex">
-                      <h3 className="border rounded-full border-green-200 p-2">1</h3>
-                    <h2 className="ml-4 border rounded-full border-red-200 p-2">2</h2></div>
+                      <h3 className="border rounded-full border-green-200 p-2">
+                        1
+                      </h3>
+                      <h2 className="ml-4 border rounded-full border-red-200 p-2">
+                        2
+                      </h2>
+                    </div>
                   </div>
                 </div>
-                  <div className="grid grid-cols-4 mt-5">
+                <div className="grid grid-cols-4 mt-5">
                   <div className="ml-10">
                     <img src="" alt="" className="w-6 h-6 " />
                   </div>
@@ -278,11 +240,16 @@ export default function Dashboard() {
                   </div>
                   <div className="ml-20 font-semibold">
                     <div className="flex">
-                      <h3 className="border rounded-full border-green-200 p-2">1</h3>
-                    <h2 className="ml-4 border rounded-full border-red-200 p-2">2</h2></div>
+                      <h3 className="border rounded-full border-green-200 p-2">
+                        1
+                      </h3>
+                      <h2 className="ml-4 border rounded-full border-red-200 p-2">
+                        2
+                      </h2>
+                    </div>
                   </div>
                 </div>
-                  <div className="grid grid-cols-4 mt-5">
+                <div className="grid grid-cols-4 mt-5">
                   <div className="ml-10">
                     <img src="" alt="" className="w-6 h-6 " />
                   </div>
@@ -295,11 +262,16 @@ export default function Dashboard() {
                   </div>
                   <div className="ml-20 font-semibold">
                     <div className="flex">
-                      <h3 className="border rounded-full border-green-200 p-2">1</h3>
-                    <h2 className="ml-4 border rounded-full border-red-200 p-2">2</h2></div>
+                      <h3 className="border rounded-full border-green-200 p-2">
+                        1
+                      </h3>
+                      <h2 className="ml-4 border rounded-full border-red-200 p-2">
+                        2
+                      </h2>
+                    </div>
                   </div>
                 </div>
-                  <div className="grid grid-cols-4 mt-5">
+                <div className="grid grid-cols-4 mt-5">
                   <div className="ml-10">
                     <img src="" alt="" className="w-6 h-6 " />
                   </div>
@@ -312,11 +284,16 @@ export default function Dashboard() {
                   </div>
                   <div className="ml-20 font-semibold">
                     <div className="flex">
-                      <h3 className="border rounded-full border-green-200 p-2">1</h3>
-                    <h2 className="ml-4 border rounded-full border-red-200 p-2">2</h2></div>
+                      <h3 className="border rounded-full border-green-200 p-2">
+                        1
+                      </h3>
+                      <h2 className="ml-4 border rounded-full border-red-200 p-2">
+                        2
+                      </h2>
+                    </div>
                   </div>
                 </div>
-                  <div className="grid grid-cols-4 mt-5">
+                <div className="grid grid-cols-4 mt-5">
                   <div className="ml-10">
                     <img src="" alt="" className="w-6 h-6 " />
                   </div>
@@ -329,11 +306,15 @@ export default function Dashboard() {
                   </div>
                   <div className="ml-20 font-semibold">
                     <div className="flex">
-                      <h3 className="border rounded-full border-green-200 p-2">1</h3>
-                    <h2 className="ml-4 border rounded-full border-red-200 p-2">2</h2></div>
+                      <h3 className="border rounded-full border-green-200 p-2">
+                        1
+                      </h3>
+                      <h2 className="ml-4 border rounded-full border-red-200 p-2">
+                        2
+                      </h2>
+                    </div>
                   </div>
                 </div>
-               
               </div>
             </div>
           </div>
