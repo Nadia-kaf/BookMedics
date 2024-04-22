@@ -7,6 +7,14 @@ import {
   TabPanel,
 } from "@material-tailwind/react";
 import React from "react";
+import doodle from "../assets/doodle.png"
+import doc from "../assets/dpic.png"
+import p4 from "../assets/p4.png";
+import p3 from "../assets/p3.png";
+import p5 from "../assets/p5.png";
+import p2 from "../assets/p2.png";
+import p1 from "../assets/p1.png";
+
 
 export default function Dashboard() {
 
@@ -36,9 +44,10 @@ export default function Dashboard() {
         <div className=" text-4xl flex justify-center mt-10">DASHBOARD</div>
         <div className="flex flex-row pt-24 px-10 pb-4">
           <div className="w-2/12 mr-6">
-            <div className="bg-white rounded-xl shadow-lg mb-6 px-6 py-4">
-              <div className="border-b-2">
-                <h1 className="border rounded-full p-10 my-10">image</h1>
+            <div className="bg-white rounded-xl shadow-lg mb-6 px-6 py-4" >
+              <div className="border-b-2" >
+              <img src={doc} alt=""  className="rounded-xl"/>
+              
                 <p>Dr. Book Medics</p>
                 <p className="py-2">Gyanaecologist</p>
               </div>
@@ -133,13 +142,34 @@ export default function Dashboard() {
           <div class="w-10/12">
             <div class="flex flex-row h-40 mt-6">
               <div class="bg-white rounded-xl shadow-lg px-6 py-4 w-4/12">
-                a
+                <div>
+                  <h2>Total Patient</h2>
+                  <h1 className="text-4xl">978</h1>
+                  <p className="text-green-500 flex mt-2  font-bold"><span  className=" font-bold"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-4 mt-2 ">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18" />
+</svg>
+</span>  15% from last week</p>
+                </div>
               </div>
               <div class="bg-white rounded-xl shadow-lg mx-6 px-6 py-4 w-4/12">
-                b
+              <div>
+                  <h2>Patients Today</h2>
+                  <h1 className="text-4xl">80</h1>
+                  <p className="text-red-500 flex mt-2  font-bold"><span  className=" font-bold"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-4 mt-2 ">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18" />
+</svg>
+</span>  15% from yesterday</p>
+                </div>
               </div>
               <div class="bg-white rounded-xl shadow-lg px-6 py-4 w-4/12">
-                c
+              <div>
+                  <h2>Appointments Today</h2>
+                  <h1 className="text-4xl">50</h1>
+                  <p className="text-green-500 flex mt-2  font-bold"><span  className=" font-bold"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-4 mt-2 ">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18" />
+</svg>
+</span>  20% from yesterday</p>
+                </div>
               </div>
             </div>
             <div class="flex flex-row mt-5">
@@ -154,7 +184,7 @@ export default function Dashboard() {
                 <p class=" text-white">Upcoming Appointment</p>
                 <div className="flex mt-10">
                   <div className="ml-10">
-                    <img src="" alt="" className="w-6 h-6 " />
+                    <img src={p4} alt="" className="w-28 h-28 rounded-xl " />
                   </div>
                   <div className="ml-8 text-white">
                     <h5>#000001</h5>
@@ -187,7 +217,7 @@ export default function Dashboard() {
 
                 <div className="grid grid-cols-2 gap-2 mt-10">
                   <div>
-                    <img src="" alt="" className="w-6 h-6" />
+                    <img src={p3} alt="" className="w-8 h-8" />
                     <h2>Name</h2>
                     <p>Patient ID</p>
                     <hr className="w-40" />
@@ -195,7 +225,7 @@ export default function Dashboard() {
                     <p>5 Mar 2024</p>
                   </div>
                   <div>
-                    <img src="" alt="" className="w-6 h-6" />
+                    <img src={p5} alt="" className="w-8 h-8" />
                     <h2>Name</h2>
                     <p>Patient ID</p>
                     <hr className="w-40" />
@@ -250,7 +280,27 @@ export default function Dashboard() {
                 <hr className="mt-3" />              
                   <div className="grid grid-cols-4 mt-5">
                   <div className="ml-10">
-                    <img src="" alt="" className="w-6 h-6 " />
+                    <img src={p1} alt="" className="w-6 h-6 " />
+                  </div>
+                  <div className="mr-3 ">
+                    <h5>#000001</h5>
+                    <h3>Akua Danso</h3>
+                  </div>
+                  <div className="mr-1 font-semibold">
+                    <h3>11 April 2024 10:00 AM</h3>
+                  </div>
+                  <div className="ml-20 font-semibold">
+                    <div className="flex">
+                      <h3 className="border rounded-full border-green-200 p-2 text-green-700"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
+  <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+</svg>
+</h3>
+                    <h2 className="ml-4 border rounded-full border-red-200 p-2">2</h2></div>
+                  </div>
+                </div>
+                  <div className="grid grid-cols-4 mt-5">
+                  <div className="ml-10">
+                    <img src={p2} alt="" className="w-6 h-6 " />
                   </div>
                   <div className="mr-3 ">
                     <h5>#000001</h5>
@@ -267,7 +317,7 @@ export default function Dashboard() {
                 </div>
                   <div className="grid grid-cols-4 mt-5">
                   <div className="ml-10">
-                    <img src="" alt="" className="w-6 h-6 " />
+                    <img src={p3} alt="" className="w-6 h-6 " />
                   </div>
                   <div className="mr-3 ">
                     <h5>#000001</h5>
@@ -284,7 +334,7 @@ export default function Dashboard() {
                 </div>
                   <div className="grid grid-cols-4 mt-5">
                   <div className="ml-10">
-                    <img src="" alt="" className="w-6 h-6 " />
+                    <img src={p4} alt="" className="w-6 h-6 " />
                   </div>
                   <div className="mr-3 ">
                     <h5>#000001</h5>
@@ -301,24 +351,7 @@ export default function Dashboard() {
                 </div>
                   <div className="grid grid-cols-4 mt-5">
                   <div className="ml-10">
-                    <img src="" alt="" className="w-6 h-6 " />
-                  </div>
-                  <div className="mr-3 ">
-                    <h5>#000001</h5>
-                    <h3>Akua Danso</h3>
-                  </div>
-                  <div className="mr-1 font-semibold">
-                    <h3>11 April 2024 10:00 AM</h3>
-                  </div>
-                  <div className="ml-20 font-semibold">
-                    <div className="flex">
-                      <h3 className="border rounded-full border-green-200 p-2">1</h3>
-                    <h2 className="ml-4 border rounded-full border-red-200 p-2">2</h2></div>
-                  </div>
-                </div>
-                  <div className="grid grid-cols-4 mt-5">
-                  <div className="ml-10">
-                    <img src="" alt="" className="w-6 h-6 " />
+                    <img src={p5} alt="" className="w-6 h-6 " />
                   </div>
                   <div className="mr-3 ">
                     <h5>#000001</h5>

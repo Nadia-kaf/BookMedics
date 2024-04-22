@@ -251,7 +251,7 @@ export default function Patient() {
             }}
           >
             <div className="flex">
-              <p class="text-xl text-indigo-900">Recent Patients</p>
+              <p class="text-xl text-white">HI cHRISTINE</p>
               <p className="ml-44 text-bit-blue underline">View all</p>
             </div>
             <hr className="mt-3" />

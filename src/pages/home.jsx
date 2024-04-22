@@ -13,9 +13,9 @@ export default function Home(){
         <Navbar/>
         <Hero/>
         <Stepss/>
+        <About/>
         <Specialties/>
         <Doctorsection/>
-         <About/>
         <Footer/>
         </>
     )
