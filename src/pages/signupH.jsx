@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import med from "../assets/med2.png"
 
 export default function SignUpH() {
@@ -38,7 +39,7 @@ export default function SignUpH() {
             </div>
             </div>
             <div class="relative">
-              <button class="bg-cyan-500 text-white rounded-md px-2 py-1">Submit</button>
+              <Link to="/loginH"><button class="bg-cyan-500 text-white rounded-md px-2 py-1">Submit</button></Link>
             </div>
           </div>
         </div>

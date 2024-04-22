@@ -34,7 +34,7 @@ export default function Pdashboard() {
           <div className="w-2/12 mr-6">
             <div className="bg-white rounded-xl shadow-lg mb-6 px-6 py-4">
               <div className="border-b-2">
-                <h1 className="border rounded-full p-10 my-10">image</h1>
+                <h1 className="border rounded-full p-10 my-10" style={{backgroundImage: ''}}>image</h1>
                 <p>Adwoa Aikins</p>
                 <p className="py-2">Patient ID: 0001</p>
                 <p className="py-2">Age: 30|Female</p>
@@ -152,10 +152,7 @@ export default function Pdashboard() {
                     <h3>Your health is 95% normal</h3>
                   </div>
                 </div>
-                <hr className="mt-10" />
-                <span class="bg-white text-xl text-bit-blue inline-block rounded-full mt-12 px-8 py-2">
-                  <strong>Start appointment</strong>
-                </span>
+               
               </div>
 
               <div

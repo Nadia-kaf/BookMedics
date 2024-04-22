@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import reception from "../assets/recption.jpg"
 
 export default function SignUp() {
@@ -36,7 +37,7 @@ export default function SignUp() {
             </div>
             </div>
             <div className="relative">
-              <button className="bg-cyan-500 text-white rounded-md px-2 py-1">Submit</button>
+              <Link to='/login'><button className="bg-cyan-500 text-white rounded-md px-2 py-1">Submit</button></Link>
             </div>
           </div>
         </div>
