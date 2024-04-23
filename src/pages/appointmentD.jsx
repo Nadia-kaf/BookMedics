@@ -1,8 +1,19 @@
-
+import doc from "../assets/dpic.png";
+import p4 from "../assets/p4.png";
+import p3 from "../assets/p3.png";
+import p5 from "../assets/p5.png";
+import p2 from "../assets/p2.png";
+import p1 from "../assets/p1.png";
 
 export default function AppointD() {
+  const patient = [
+    { id: "0001", name: "Ama", date: "11 April 2024 10:00 AM", image: p4 },
+    { id: "0002", name: "Ama", date: "11 April 2024 10:00 AM", image: p3 },
+    { id: "0003", name: "Ama", date: "11 April 2024 10:00 AM", image: p5 },
+    { id: "0003", name: "Ama", date: "11 April 2024 10:00 AM", image: p2 },
+    { id: "0003", name: "Ama", date: "11 April 2024 10:00 AM", image: p1 },
+  ];
 
- 
   return (
     <>
       <link
@@ -10,12 +21,13 @@ export default function AppointD() {
         rel="stylesheet"
       />
 
-      <div className=" min-h-screen">
+      <div className=" min-h-screen bg-foot-blue">
         <div className="flex flex-row  px-10 pb-4">
-          <div className="w-2/12 mr-6">
+          <div className="w-2/12 mr-6 mt-10">
             <div className="bg-white rounded-xl shadow-lg mb-6 px-6 py-4">
               <div className="border-b-2">
-                <h1 className="border rounded-full p-10 my-10">image</h1>
+                <img src={doc} alt="" className="rounded-xl" />
+
                 <p>Dr. Book Medics</p>
                 <p className="py-2">Gyanaecologist</p>
               </div>
@@ -44,7 +56,7 @@ export default function AppointD() {
                 </span>
               </a>
               <a
-                href=""
+                href="/doctor/patients"
                 className="inline-block text-gray-600 hover:text-black my-4 w-full"
               >
                 <span className="material-icons-outlined float-left pr-2">
@@ -92,7 +104,7 @@ export default function AppointD() {
                 </span>
               </a>
               <a
-                href=""
+                href="/"
                 className="inline-block text-gray-600 hover:text-black my-4 w-full"
               >
                 <span className="material-icons-outlined float-left pr-2">
@@ -106,123 +118,86 @@ export default function AppointD() {
             </div>
           </div>
           {/* <!-- Tab Content --> */}
-        <div className="mt-20">
-           <div className="flex">
-            <h2>Appointment</h2>
-            <input type="search" placeholder="search" className="ml-96" />
-           </div>
-           <hr />
-           <div className="flex mt-3">
-             <button className="border rounded-xl bg-bit-blue text-white p-2">upcoming <span className="border rounded-full p-1 bg-white font-bold text-black">21</span></button>
-             <button className="ml-10 border rounded-xl bg-bit-blue text-white p-2">cancelled <span className="border rounded-full p-1 bg-white text-black font-bold">4</span></button>
-             <button className="ml-10 border rounded-xl bg-bit-blue text-white p-2">completed <span className="border rounded-full p-1 bg-white font-bold text-black">214</span></button>
-           </div>
-           
-           <h1>Filter and calendar</h1>
-           <div className="grid grid-cols-4 mt-5 border rounded-xl shadow p-4">
-                  <div className="ml-10">
-                    <img src="" alt="" className="w-6 h-6 " />
-                  </div>
-                  <div className="mr-3 ">
-                    <h5>#000001</h5>
-                    <h3>Akua Danso</h3>
-                  </div>
-                  <div className="mr-1 font-semibold">
-                    <h3>11 April 2024 10:00 AM</h3>
-                  </div>
-                  <div className="ml-20 font-semibold">
-                    <div className="flex">
-                      <h3 className="border rounded-full border-green-200 p-2">1</h3>
-                    <h2 className="ml-4 border rounded-full border-red-200 p-2">2</h2></div>
+          <div className="mt-20">
+            <div className="flex">
+              <h2 className="text-4xl text-white">Appointment</h2>
+              <input type="search" placeholder="search" className="ml-96" />
+            </div>
+            <hr />
+            <div className="flex mt-3">
+              <button className="border rounded-xl bg-bit-blue text-white p-2">
+                upcoming{" "}
+                <span className="border rounded-full p-1 bg-white font-bold text-black">
+                  21
+                </span>
+              </button>
+              <button className="ml-10 border rounded-xl bg-bit-blue text-white p-2">
+                cancelled{" "}
+                <span className="border rounded-full p-1 bg-white text-black font-bold">
+                  4
+                </span>
+              </button>
+              <button className="ml-10 border rounded-xl bg-bit-blue text-white p-2">
+                completed{" "}
+                <span className="border rounded-full p-1 bg-white font-bold text-black">
+                  214
+                </span>
+              </button>
+            </div>
+
+            <h1>Filter and calendar</h1>
+            {patient.map((patient) => (
+              <div className="grid grid-cols-4 mt-5 border bg-white shadow rounded-xl shadow p-4">
+                <div className="ml-10">
+                  <img src={patient.image} alt="" className="w-6 h-6 " />
+                </div>
+                <div className="mr-3 ">
+                  <h5>{patient.id}</h5>
+                  <h3>{patient.name}</h3>
+                </div>
+                <div className="mr-1 font-semibold">
+                  <h3>{patient.date}</h3>
+                </div>
+                <div className="ml-20 font-semibold">
+                  <div className="flex">
+                    <h3 className="border rounded-full h-6 border-green-200 p-1 text-green-700">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={1.5}
+                        stroke="currentColor"
+                        className="w-4 h-4"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="m4.5 12.75 6 6 9-13.5"
+                        />
+                      </svg>
+                    </h3>
+                    <h2 className="ml-4 border rounded-full h-6 border-red-200 text-red-700 p-1">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={1.5}
+                        stroke="currentColor"
+                        className="w-4 h-4"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M6 18 18 6M6 6l12 12"
+                        />
+                      </svg>
+                    </h2>
                   </div>
                 </div>
-           <div className="grid grid-cols-4 mt-5 border rounded-xl shadow p-4">
-                  <div className="ml-10">
-                    <img src="" alt="" className="w-6 h-6 " />
-                  </div>
-                  <div className="mr-3 ">
-                    <h5>#000001</h5>
-                    <h3>Akua Danso</h3>
-                  </div>
-                  <div className="mr-1 font-semibold">
-                    <h3>11 April 2024 10:00 AM</h3>
-                  </div>
-                  <div className="ml-20 font-semibold">
-                    <div className="flex">
-                      <h3 className="border rounded-full border-green-200 p-2">1</h3>
-                    <h2 className="ml-4 border rounded-full border-red-200 p-2">2</h2></div>
-                  </div>
-                </div>
-           <div className="grid grid-cols-4 mt-5 border rounded-xl shadow p-4">
-                  <div className="ml-10">
-                    <img src="" alt="" className="w-6 h-6 " />
-                  </div>
-                  <div className="mr-3 ">
-                    <h5>#000001</h5>
-                    <h3>Akua Danso</h3>
-                  </div>
-                  <div className="mr-1 font-semibold">
-                    <h3>11 April 2024 10:00 AM</h3>
-                  </div>
-                  <div className="ml-20 font-semibold">
-                    <div className="flex">
-                      <h3 className="border rounded-full border-green-200 p-2">1</h3>
-                    <h2 className="ml-4 border rounded-full border-red-200 p-2">2</h2></div>
-                  </div>
-                </div>
-           <div className="grid grid-cols-4 mt-5 border rounded-xl shadow p-4">
-                  <div className="ml-10">
-                    <img src="" alt="" className="w-6 h-6 " />
-                  </div>
-                  <div className="mr-3 ">
-                    <h5>#000001</h5>
-                    <h3>Akua Danso</h3>
-                  </div>
-                  <div className="mr-1 font-semibold">
-                    <h3>11 April 2024 10:00 AM</h3>
-                  </div>
-                  <div className="ml-20 font-semibold">
-                    <div className="flex">
-                      <h3 className="border rounded-full border-green-200 p-2">1</h3>
-                    <h2 className="ml-4 border rounded-full border-red-200 p-2">2</h2></div>
-                  </div>
-                </div>
-           <div className="grid grid-cols-4 mt-5 border rounded-xl shadow p-4">
-                  <div className="ml-10">
-                    <img src="" alt="" className="w-6 h-6 " />
-                  </div>
-                  <div className="mr-3 ">
-                    <h5>#000001</h5>
-                    <h3>Akua Danso</h3>
-                  </div>
-                  <div className="mr-1 font-semibold">
-                    <h3>11 April 2024 10:00 AM</h3>
-                  </div>
-                  <div className="ml-20 font-semibold">
-                    <div className="flex">
-                      <h3 className="border rounded-full border-green-200 p-2">1</h3>
-                    <h2 className="ml-4 border rounded-full border-red-200 p-2">2</h2></div>
-                  </div>
-                </div>
-           <div className="grid grid-cols-4 mt-5 border rounded-xl shadow p-4">
-                  <div className="ml-10">
-                    <img src="" alt="" className="w-6 h-6 " />
-                  </div>
-                  <div className="mr-3 ">
-                    <h5>#000001</h5>
-                    <h3>Akua Danso</h3>
-                  </div>
-                  <div className="mr-1 font-semibold">
-                    <h3>11 April 2024 10:00 AM</h3>
-                  </div>
-                  <div className="ml-20 font-semibold">
-                    <div className="flex">
-                      <h3 className="border rounded-full border-green-200 p-2">1</h3>
-                    <h2 className="ml-4 border rounded-full border-red-200 p-2">2</h2></div>
-                  </div>
-                </div>
+              </div>
+            ))}
+          </div>
         </div>
-    </div>
       </div>
     </>
   );
