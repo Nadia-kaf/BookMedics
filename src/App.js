@@ -14,6 +14,10 @@ import AvailableSlots from './pages/available-slots';
 import DocPatient from './pages/mypatients';
 import Pdashboard from './pages/pdashboard';
 import Patient from './pages/patient';
+import Aform from './pages/Aform';
+import BookingSuccess from './pages/bookingsuccess';
+import Checkout from './pages/checkout';
+import About from './components/about';
 
 
 const router= createBrowserRouter([
@@ -29,7 +33,11 @@ const router= createBrowserRouter([
 {path:'/doctor/available-slot', element: <AvailableSlots/>},
 {path:'/doctor/patients', element: <DocPatient/>},
 {path:'/patient/dashboard', element: <Pdashboard/>},
-{path:'/patient', element: <Patient/>}
+{path:'/patient', element: <Patient/>},
+{path:'/booking', element: <Aform/>},
+{path:'/booking-success', element: <BookingSuccess/>},
+{path:'/checkout', element: <Checkout/>},
+{path:'/about', element: <About/>}
 ])
 
 function App() {

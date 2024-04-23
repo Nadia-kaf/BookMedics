@@ -14,6 +14,8 @@ import p3 from "../assets/p3.png";
 import p5 from "../assets/p5.png";
 import p2 from "../assets/p2.png";
 import p1 from "../assets/p1.png";
+import Revenue from "../components/revenue";
+import AppointmentB from "../components/appointmentbar";
 
 
 export default function Dashboard() {
@@ -23,12 +25,12 @@ export default function Dashboard() {
     {
       label: "Revenue",
       value: "chart",
-      desc: "lorem",
+      desc: <Revenue/>,
     },
     {
       label: "Appointments",
       value: "data",
-      desc: `lorem`,
+      desc: <AppointmentB/>,
     },
   ];
 
@@ -40,7 +42,6 @@ export default function Dashboard() {
       />
 
       <div className=" min-h-screen bg-foot-blue">
-        <div className=" text-4xl flex justify-center mt-10">DASHBOARD</div>
         <div className="flex flex-row pt-24 px-10 pb-4">
           <div className="w-2/12 mr-6">
             <div className="bg-white rounded-xl shadow-lg mb-6 px-6 py-4" >

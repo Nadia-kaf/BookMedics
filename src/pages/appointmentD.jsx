@@ -121,23 +121,31 @@ export default function AppointD() {
           <div className="mt-20">
             <div className="flex">
               <h2 className="text-4xl text-white">Appointment</h2>
-              <input type="search" placeholder="search" className="ml-96" />
+               <div class="flex w-96 mx-10 rounded bg-white ml-40 mb-10 text-white">
+        <input class=" w-full border-none bg-transparent px-4 py-1 text-gray-400 outline-none focus:outline-none " type="search" name="search" placeholder="Search..." />
+        <button type="submit" class="m-2 rounded bg-blue-600 px-4 py-2 text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+</svg>
+
+        </button>
+    </div>
             </div>
             <hr />
             <div className="flex mt-3">
-              <button className="border rounded-xl bg-bit-blue text-white p-2">
+              <button className="border rounded-xl bg-blue-600 text-white p-2">
                 upcoming{" "}
                 <span className="border rounded-full p-1 bg-white font-bold text-black">
                   21
                 </span>
               </button>
-              <button className="ml-10 border rounded-xl bg-bit-blue text-white p-2">
+              <button className="ml-10 border rounded-xl bg-blue-600 text-white p-2">
                 cancelled{" "}
                 <span className="border rounded-full p-1 bg-white text-black font-bold">
                   4
                 </span>
               </button>
-              <button className="ml-10 border rounded-xl bg-bit-blue text-white p-2">
+              <button className="ml-10 border rounded-xl bg-blue-600 text-white p-2">
                 completed{" "}
                 <span className="border rounded-full p-1 bg-white font-bold text-black">
                   214
@@ -145,11 +153,10 @@ export default function AppointD() {
               </button>
             </div>
 
-            <h1>Filter and calendar</h1>
             {patient.map((patient) => (
-              <div className="grid grid-cols-4 mt-5 border bg-white shadow rounded-xl shadow p-4">
+              <div className="grid grid-cols-4 mt-5 border bg-white  rounded-xl shadow p-4">
                 <div className="ml-10">
-                  <img src={patient.image} alt="" className="w-6 h-6 " />
+                  <img src={patient.image} alt="" className="w-20 h-20  rounded-md" />
                 </div>
                 <div className="mr-3 ">
                   <h5>{patient.id}</h5>
@@ -176,7 +183,7 @@ export default function AppointD() {
                         />
                       </svg>
                     </h3>
-                    <h2 className="ml-4 border rounded-full h-6 border-red-200 text-red-700 p-1">
+                    <h2 className="ml-4 border rounded-full h-6 border-red-200 font-bold text-red-700 p-1">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"

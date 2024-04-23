@@ -1,3 +1,4 @@
+import logo from "../assets/logo.png"
 
 export default function Footer(){
     return(
@@ -7,21 +8,7 @@ export default function Footer(){
         <div class="-mx-4 flex flex-wrap justify-between">
           <div class="px-4 my-4 w-full xl:w-1/5">
             <a href="/" class="block w-56 mb-10">
-              <svg version="1.1" viewBox="0 0 3368 512" xmlns="http://www.w3.org/2000/svg">
-                <g fill="none" fill-rule="evenodd">
-                  <g transform="translate(0 -75)">
-                    <g transform="translate(0 75)">
-                      <rect width="512" height="512" rx="128" fill="#3D5AFE"></rect>
-                      <rect x="149" y="176" width="220" height="220" fill="#fff"></rect>
-                      <circle cx="259" cy="156" r="40" fill="#fff"></circle>
-                      <circle cx="369" cy="286" r="40" fill="#2962FF"></circle>
-                    </g>
-                    <text fill="white" font-family="Nunito-Bold, Nunito" font-size="512" font-weight="bold">
-                      <tspan x="654" y="518">BookMedics</tspan>
-                    </text>
-                  </g>
-                </g>
-              </svg>
+            <span className="font-semibold  p-2"><img src={logo} alt="" className='w-44 h-15 bg-white rounded-md' /></span>
             </a>
           </div>
 

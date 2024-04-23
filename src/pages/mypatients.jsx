@@ -25,7 +25,7 @@ export default function DocPatient() {
         rel="stylesheet"
       />
 
-      <div className=" min-h-screen bg-deep-blue">
+      <div className=" min-h-screen bg-foot-blue">
         <div className=" text-4xl flex justify-center mt-10">My Patients</div>
         <div className="flex flex-row pt-24 px-10 pb-4">
           <div className="w-2/12 mr-6">
@@ -129,7 +129,7 @@ export default function DocPatient() {
             <li class="p-6 shadow-xl  bg-white rounded-xl ring-1 ring-black/5 shadow-black/10">
               <div className="flex">
                 <div>
-                  <img src={patient.image} alt="" className="w-8 h-8" />
+                  <img src={patient.image} alt="" className="w-10 h-10 rounded-md" />
                 </div>
                 <div>
                   <p class="font-bold tracking-tighter text-blue">{patient.id}</p>
@@ -138,7 +138,7 @@ export default function DocPatient() {
                 </div>
               </div>
 
-              <div class=" mt-3 items-center bg-gray-100 rounded rounded-xl py-1">
+              <div class=" mt-3 items-center bg-gray-100  rounded-xl py-1">
                 <p>11 April,2024</p>
                 <p className="mt-2">Kasoa,Accra</p>
               </div>

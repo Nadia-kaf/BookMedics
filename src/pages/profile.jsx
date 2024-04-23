@@ -11,6 +11,7 @@ import Footer from "../components/footer";
 import Overview from "../components/overview";
 import Review from "../components/review";
 import Location from "../components/location";
+import { Link } from "react-router-dom";
  
 
 export default function Profile(){
@@ -93,7 +94,7 @@ export default function Profile(){
           <h2>4 reviews</h2>
           <h2>$50-$100</h2>
           
-          <button className="border rounded-xl bg-blue-500 p-2 px-6 text-white mt-5">Book Appointment</button>
+          <Link to="/booking"><button className="border rounded-xl bg-blue-500 p-2 px-6 text-white mt-5">Book Appointment</button></Link>
         </div>
       </div>
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
- 
+import logo from "../assets/logo.png"
 
 export default function Navbar(){
     
@@ -29,21 +29,21 @@ export default function Navbar(){
   return (
     <nav className="flex items-center h-16 px-4 border gap-4 bg-nav-blue ">
       <div className="flex items-center gap-2" href="#">
-        <span className="font-semibold text-xl">BookMedics</span>
+        <span className="font-semibold  bg-white rounded-xl mr-20 p-2"><img src={logo} alt="" className='w-44 h-15' /></span>
       </div>
       <ul className="flex-1 flex justify-center items-center gap-6 text-white">
-        <li className="flex items-center gap-1 text-sm font-medium hover:underline" href="/">
+       <Link to="/"> <li className="flex items-center gap-1 text-sm font-medium hover:underline" href="/">
           Home
-        </li>
-        <li className="flex items-center gap-1 text-sm font-medium hover:underline" href="/services">
-          Services
-        </li>
+        </li></Link>
+        <Link to="/about"><li className="flex items-center gap-1 text-sm font-medium hover:underline" href="/about">
+          About
+        </li></Link>
         <Link to="/searchS"><li className="flex items-center gap-1 text-sm font-medium hover:underline">
           Health Professionals
         </li></Link>
-        <li className="flex items-center gap-1 text-sm font-medium hover:underline" href="/contact">
+       <Link to="/contact"> <li className="flex items-center gap-1 text-sm font-medium hover:underline" href="/contact">
           Contact Us
-        </li>
+        </li></Link>
       </ul>
       <div className="ml-auto">
         <button>

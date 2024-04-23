@@ -32,10 +32,8 @@ export default function SearchServices() {
   return (
     <div class="bg-white">
       <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="flex items-baseline justify-between border-b  border-gray-200 pb-6 pt-24" style={{backgroundImage: `url(${searchpic})`, backgroundPosition: "center"}}>
-          <h1 class="text-4xl font-bold tracking-tight text-gray-900 mx-auto">
-            Search Doctors
-          </h1>
+        <div>
+          <img src={searchpic} alt="" className="flex items-baseline justify-between h-40 " />
         </div>
 
         <section aria-labelledby="products-heading" class="pb-24 pt-6">
@@ -282,7 +280,7 @@ export default function SearchServices() {
                   <h2>$50-$100</h2>
                   <button className="border rounded-xl bg-blue-500 p-2 px-10 text-white mt-2 "><Link to="/profile">View Profile</Link></button>
                   <br />
-                  <button className="border rounded-xl bg-blue-500 p-2 px-6 text-white mt-5">Book Appointment</button>
+                  <Link to="/booking"><button className="border rounded-xl bg-blue-500 p-2 px-6 text-white mt-5">Book Appointment</button></Link>
                 </div>
               </div>
                 ))}

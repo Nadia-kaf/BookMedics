@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 import {
@@ -16,31 +17,31 @@ import {
 const data = [
   {
     name: 'Mon ',
-    amt: 2400,
+    number: 50,
   },
   {
     name: 'Tues ',
-    amt: 2210,
+    number: 30,
   },
   {
     name: 'Wed',
-    amt: 2290,
+    number: 40,
   },
   {
     name: 'Thurs',
-    amt: 2000,
+    number: 20,
   },
   {
     name: 'Fri',
-    amt: 2181,
+    number: 10,
   },
   {
     name: 'Sat ',
-    amt: 2500,
+    number: 35,
   },
   {
     name: 'Sun ',
-    amt: 2100,
+    number: 9,
   },
 ];
 
@@ -48,7 +49,7 @@ const data = [
 
 
 
-export default function Revenue() {
+export default function AppointmentB() {
 
   // render()
   //  {
@@ -68,8 +69,7 @@ export default function Revenue() {
         <XAxis dataKey="name" scale="band" />
         <YAxis />
         <Tooltip />
-        <Legend />
-        <Bar dataKey="amt" barSize={20} fill="#413ea0" />
+        <Bar dataKey="number" barSize={20} fill="#FF5A5F" />
       </ComposedChart>
     );
   
