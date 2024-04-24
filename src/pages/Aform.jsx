@@ -1,12 +1,20 @@
 import { Link } from "react-router-dom";
 import dpic from "../assets/dpic.png";
 import Footer from "../components/footer";
+import Booking from "./booking";
 
 export default function Aform() {
   return (
     <>
       <section>
-        <div className="grid grid-cols-2 gap-9 border rounded-xl p-5 mx-40 mt-20">
+        <div className="flex">
+          <div className="w-full">
+        <Booking/>
+        </div>
+
+         <div className="flex items-center ml-96 mb-96">
+
+         <div className="grid grid-cols-1  border rounded-xl p-5  mt-20">
           <div className="flex">
             <div>
               <img src={dpic} alt="doctor's pic" />
@@ -57,126 +65,10 @@ export default function Aform() {
           </div>
         </div>
 
-        <div className=" ml-44 my-10">
-          <h1 className="text-3xl">30 April,2024</h1>
-          <p>Tuesday</p>
+         </div>
+
         </div>
 
-        <div className="border rounded-xl mx-40 pb-20 px-10 ">
-          <div className="grid grid-cols-7 gap-3 mt-5 ">
-            <div className="flex ">
-              <div className="mr-5">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M15.75 19.5 8.25 12l7.5-7.5"
-                  />
-                </svg>
-              </div>
-              <div>
-                <h1>MON</h1>
-                <h4 className="text-sm mt-2 mr-2">29 APRIL 2024</h4>
-              </div>
-            </div>
-            <div>
-              <h1>TUES</h1>
-              <h4 className="text-sm mt-2 mr-2">30 APRIL 2024</h4>
-            </div>
-            <div>
-              <h1>WED</h1>
-              <h4 className="text-sm mt-2 mr-2">01 MAY 2024</h4>
-            </div>
-            <div>
-              <h1>THURS</h1>
-              <h4 className="text-sm mt-2 mr-2">02 MAY 2024</h4>
-            </div>
-            <div>
-              <h1>FRI</h1>
-              <h4 className="text-sm mt-2 mr-2">03 MAY 2024</h4>
-            </div>
-            <div>
-              <h1>SAT</h1>
-              <h4 className="text-sm mt-2 mr-2">04 MAY 2024</h4>
-            </div>
-            <div className="flex">
-              <div>
-                {" "}
-                <h1>SUN</h1>
-                <h4 className="text-sm mt-2 mr-2">05 MAY 2024</h4>
-              </div>
-              <div className="ml-5">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6 "
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="m8.25 4.5 7.5 7.5-7.5 7.5"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-          <hr className="mx-20 mt-3" />
-
-          <div className="grid grid-cols-7  gap-3 mt-5 mx-38">
-            <div className="border rounded-xl bg-blue-800 text-white w-20 p-2 items-center">
-              9:00 AM
-            </div>
-            <div className="border rounded-xl bg-blue-800 text-white w-20 p-2 items-center">
-              9:00 am
-            </div>
-            <div className="border rounded-xl bg-blue-800 text-white w-20 p-2 items-center">
-              9:00 am
-            </div>
-            <div className="border rounded-xl bg-blue-800 text-white w-20 p-2 items-center">
-              9:00 am
-            </div>
-            <div className="border rounded-xl bg-blue-800 text-white w-20 p-2 items-center">
-              9:00 am
-            </div>
-            <div className="border rounded-xl bg-blue-800 text-white w-20 p-2 items-center">
-              9:00 am
-            </div>
-            <div className="border rounded-xl bg-blue-800 text-white w-20 p-2 items-center">
-              9:00 am
-            </div>
-            <div className="border rounded-xl bg-blue-800 text-white w-20 p-2 items-center">
-              9:00 am
-            </div>
-            <div className="border rounded-xl bg-blue-800 text-white w-20 p-2 items-center">
-              9:00 am
-            </div>
-            <div className="border rounded-xl bg-blue-800 text-white w-20 p-2 items-center">
-              9:00 am
-            </div>
-            <div className="border rounded-xl bg-blue-800 text-white w-20 p-2 items-center">
-              9:00 am
-            </div>
-            <div className="border rounded-xl bg-blue-800 text-white w-20 p-2 items-center">
-              9:00 am
-            </div>
-            <div className="border rounded-xl bg-blue-800 text-white w-20 p-2 items-center">
-              9:00 am
-            </div>
-            <div className="border rounded-xl bg-blue-800 text-white w-20 p-2 items-center">
-              9:00 am
-            </div>
-          </div>
-        </div>
         <div className="flex justify-end mr-96 my-20">
           <Link to="/checkout">
             <button className="border rounded-xl bg-green-600 text-white p-4 ">

@@ -2,22 +2,12 @@ import { Link } from "react-router-dom";
 import dpic from "../assets/dpic.png";
 import { useState } from "react";
 import searchpic from "../assets/searchpic2.png"
+import { healthproviders } from "../pages/jsondata/doctors";
 
 
 export default function SearchServices() {
 
-  const healthproviders = [
-    { name: "Dr. Myles Vank", specialty: "Gynecologist", gender: "male", image: dpic },
-    { name: "Dr. Jessy White", specialty: "Gynecologist", gender: "female", image: dpic },
-    { name: "Dr. John Wlake", specialty: "Dentist", gender: "male", image: dpic },
-    { name: "Dr. Vic Michigan", specialty: "Dentist", gender: "female", image: dpic },
-    { name: "Dr. Evans Brooke", specialty: "Opthalmologist", gender: "male", image: dpic },
-    { name: "Dr. Ella North", specialty: "Opthalmologist", gender: "female", image: dpic },
-    { name: "Dr. Elma Park", specialty: "Cardiologist", gender: "female", image: dpic },
-    { name: "Dr. Josiah Sit", specialty: "Neurologist", gender: "male", image: dpic },
-    { name: "Dr. Mark Thompson", specialty: "Neurologist", gender: "male", image: dpic },
-    { name: "Dr. Emma Stone", specialty: "Cardiologist", gender: "female", image: dpic }
-  ];
+  
 
   const [specialtyFilter, setSpecialtyFilter] = useState("");
   const [genderFilter, setGenderFilter] = useState("");
@@ -233,7 +223,7 @@ export default function SearchServices() {
 
 <div className="flex">  
 <div>
-<img src={healthproviders.image} alt="doctor's pic" />
+<img src={healthproviders.image} alt="doctor's pic"className="rounded-md h-40 w-44" />
 </div>
 <div className="ml-10">
 <h3>{healthproviders.name}</h3>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Footer from "../components/footer";
 
 
@@ -16,9 +17,9 @@ export default function BookingSuccess(){
             <p class="text-gray-600 my-2">Appointment booked with <span className="font-bold">Dr. Book Medics</span></p>
             <p> on <span className="font-bold">30 April 2024 9:00AM to 10:00AM </span> </p>
             <div class="py-10 text-center">
-                <a href="#" class="px-12 bg-green-600 rounded-xl mt-5 hover:bg-indigo-500 text-white font-semibold py-3">
-                    GO BACK 
-               </a>
+                <Link  to="/patient/appointment" class="px-12 bg-green-600 rounded-xl mt-5 hover:bg-indigo-500 text-white font-semibold py-3">
+                  View in Dashboard 
+               </Link>
             </div>
         </div>
     </div>

@@ -12,7 +12,7 @@ import Overview from "../components/overview";
 import Review from "../components/review";
 import Location from "../components/location";
 import { Link } from "react-router-dom";
- 
+ import { healthproviders } from "./jsondata/doctors";
 
 export default function Profile(){
 
