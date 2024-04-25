@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import dpic from "../assets/dpic.png";
 import Footer from "../components/footer";
-import Booking from "./booking";
+import {AppointmentAdd} from "./booking";
 
 export default function Aform() {
   return (
@@ -9,7 +9,7 @@ export default function Aform() {
       <section>
         <div className="flex">
           <div className="w-full">
-        <Booking/>
+        <AppointmentAdd/>
         </div>
 
          <div className="flex items-center ml-96 mb-96">

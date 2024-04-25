@@ -1,5 +1,6 @@
 import hero from "../assets/hero2.jpg";
 import doc from "../assets/doc.png";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -22,9 +23,11 @@ export default function Hero() {
         <p className="mt-2 text-white">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit.
         </p>
+        <Link to="/booking">
         <button className="mt-10 border rounded-xl bg-blue-800 border-blue-800 text-white p-2 animate-pulse">
           Book appointment
         </button>
+        </Link>
       </div>
 
       {/* <div className=" flex border rounded-xl w-44 bg-white p-2 mt-52">

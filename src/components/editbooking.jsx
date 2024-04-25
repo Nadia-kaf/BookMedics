@@ -1,9 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import pik from "../assets/appointpik.png"
 
-export const AppointmentAdd = ()=> {
+
+export const EditAppointment = ()=> {
+
+    const params = useParams();
+
     const [name, setName] = useState(null);
     const [email, setEmail] = useState(null);
     const [phone, setPhone] = useState(null);
@@ -15,10 +18,30 @@ export const AppointmentAdd = ()=> {
  
     const navigate = useNavigate();
 
+    const getAppointment = async () => {
+        try {
+          const response = await fetch(
+            `${process.env.REACT_APP_BOOKMEDICS_API}/appointment/${params.id}`
+          );
+          const data = await response.json();
+    
+          setName(data.name);
+          setEmail(data.email);
+          setPhone(data.phone);
+          setDate(data.date);
+          setTime(data.time);
+          setHealthprofessional(data.healthprofessional);
+          setService(data.service);
+
+        } catch (error) {
+          console.log(error);
+        }
+      };
+
     const onSubmitHandler = async (e) => {
         e.preventDefault();
     
-        const newBooking = {
+        const editedBooking = {
           name: name,
           email: email,
           phone: phone,
@@ -30,13 +53,13 @@ export const AppointmentAdd = ()=> {
         };
     
         try {
-            const response = await fetch(`${process.env.REACT_APP_BOOKMEDICS_API}/appointment`, {
-              method: "POST",
+            const response = await fetch(`${process.env.REACT_APP_BOOKMEDICS_API}/appointment/${params.id}`, {
+              method: "PATCH",
               headers: {
                 "Content-Type": "application/json",
               },
               // Authorization: `Bearer ${localStorage.getItem("token")}`,
-              body: JSON.stringify(newBooking),
+              body: JSON.stringify(editedBooking),
             });
       
             const data = await response.json();
@@ -48,13 +71,17 @@ export const AppointmentAdd = ()=> {
           }
         };
       
+     
+  useEffect(() => {
+    getAppointment();
+  }, [params.id]);
 
 
 
     return(
-    <div  className="flex justify-center" style={{ backgroundImage: `url(${pik})`, backgroundSize: 'cover', backgroundPosition: 'center', height:"100%", width: "100%"}}>
-     <div class="mx-52   my-20 w-full h-full bg-slate-200 rounded-lg " >
-      <form class=" px-6  "  onSubmit={onSubmitHandler}>
+     <div class="max-w-md mx-auto mt-10 bg-white shadow-lg rounded-lg overflow-hidden">
+   
+    <form class="py-4 px-6"  onSubmit={onSubmitHandler}>
         <div class="mb-4">
             <label class="block text-gray-700 font-bold mb-2" for="name">
                 Name
@@ -145,7 +172,7 @@ export const AppointmentAdd = ()=> {
                 id="message" rows="4" placeholder="Enter any additional information"                  onChange={(e) => setMessage(e.target.value)}
                 ></textarea>
         </div>
-        <div class="flex items-center justify-center mb-10 ">
+        <div class="flex items-center justify-center mb-4">
            <Link to="/booking-success">
            <button
                 class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-500 focus:outline-none focus:shadow-outline"
@@ -156,7 +183,6 @@ export const AppointmentAdd = ()=> {
         </div>
 
     </form>
-</div>
 </div>
     )
 }
