@@ -9,22 +9,23 @@ import { MdDelete, MdEdit } from "react-icons/md";
 export default function PatientBooking() {
   const [appointments, setAppointments] = useState(null);
   const [loading, setLoading] = useState(false);
-  //   const navigate = useNavigate();
+    // const navigate = useNavigate();
 
   const getAppointments = async () => {
     try {
       setLoading(true);
-      //   console.log(`${process.env.BACKEND_URI}/product`);
-      const response = await fetch(`${process.env.REACT_APP_FRESH_MARKET_API}/api/product`);
+      //   console.log(`${process.env.BACKEND_URI}/appointment`);
+      const response = await fetch(`${process.env.REACT_APP_BOOKMEDICS_API}/appointment`);
       const data = await response.json();
       console.log(data);
-      getAppointments(data);
+      setAppointments(data);
 
       //   console.log(first)
 
       setLoading(false);
+
     } catch (error) {
-      console.log(error);
+      console.log(error)
     }
   };
 
@@ -318,12 +319,7 @@ export default function PatientBooking() {
                 >
                   Service
                 </th>
-                <th
-                  scope="col"
-                  class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                >
-                  Status
-                </th>
+                
                 <th
                   scope="col"
                   class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
@@ -346,7 +342,13 @@ export default function PatientBooking() {
                   scope="col"
                   class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                 >
-                  Actions
+                  Edit
+                </th>
+                <th
+                  scope="col"
+                  class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                >
+                  Delete
                 </th>
               </tr>
             </thead>
@@ -369,11 +371,6 @@ export default function PatientBooking() {
                     <div class="text-sm text-gray-900">
                       {appointment.service}
                     </div>
-                  </td>
-                  <td class="px-6 py-4 whitespace-nowrap">
-                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                      {appointment.status}
-                    </span>
                   </td>
                   <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                     {appointment.healthprofessional}

@@ -9,7 +9,7 @@ import {
 } from "@material-tailwind/react";
 import Footer from "../components/footer";
 import Overview from "../components/overview";
-import Review from "../components/review";
+import {Review} from "../components/review";
 import Location from "../components/location";
 import { Link } from "react-router-dom";
  import { healthproviders } from "./jsondata/doctors";

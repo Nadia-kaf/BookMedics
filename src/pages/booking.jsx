@@ -30,7 +30,7 @@ export const AppointmentAdd = ()=> {
         };
     
         try {
-            const response = await fetch(`${process.env.REACT_APP_BOOKMEDICS_API}/appointment`, {
+            const response = await fetch(`http://localhost:4000/appointment`, {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
@@ -109,13 +109,13 @@ export const AppointmentAdd = ()=> {
                 id="service" name="service"  onChange={(e) => setService(e.target.value)}
                 >
                 <option value="">Select a service</option>
-                <option value="haircut">General medicals</option>
-                <option value="coloring">Dental</option>
-                <option value="styling">Cardiology</option>
-                <option value="facial">Diet</option>
-                <option value="facial">Neurology</option>
-                <option value="facial">Ophthomology</option>
-                <option value="facial">Urology</option>
+                <option value="General medicals">General medicals</option>
+                <option value="Dental">Dental</option>
+                <option value="Cardiology">Cardiology</option>
+                <option value="Diet">Diet</option>
+                <option value="Neurology">Neurology</option>
+                <option value="Ophthomology">Ophthomology</option>
+                <option value="Urology">Urology</option>
             </select>
         </div>
         <div class="mb-4">
@@ -127,13 +127,10 @@ export const AppointmentAdd = ()=> {
                 id="service" name="service"  onChange={(e) => setHealthprofessional(e.target.value)}
                 >
                 <option value="">Select a doctor</option>
-                <option value="haircut">Dr. Sarah Johnson</option>
-                <option value="coloring">Dr. Michael Smith</option>
-                <option value="styling">Cardiology</option>
-                <option value="facial">Diet</option>
-                <option value="facial">Neurology</option>
-                <option value="facial">Ophthomology</option>
-                <option value="facial">Urology</option>
+                <option value="Dr. Sarah Johnson">Dr. Sarah Johnson</option>
+                <option value="Dr. Michael Smith">Dr. Michael Smith</option>
+                <option value="Dr. Michael Smith">Dr. Mercy</option>
+               
             </select>
         </div>
         <div class="mb-4">
@@ -146,13 +143,13 @@ export const AppointmentAdd = ()=> {
                 ></textarea>
         </div>
         <div class="flex items-center justify-center mb-10 ">
-           <Link to="/booking-success">
+           {/* <Link to="/booking-"> */}
            <button
                 class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-500 focus:outline-none focus:shadow-outline"
                 type="submit">
                 Book Appointment
             </button>
-           </Link>
+           {/* </Link> */}
         </div>
 
     </form>

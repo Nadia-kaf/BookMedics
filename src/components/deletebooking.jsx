@@ -2,6 +2,7 @@ import React from "react";
 import { MdDelete } from "react-icons/md";
 
 export default function DeleteAppointment({ appointmentId }) {
+
   const onDeleteHandler = async () => {
     try {
       await fetch(`${process.env.REACT_APP_BOOKMEDICS_API}/appointment/${appointmentId}`, {
@@ -11,6 +12,8 @@ export default function DeleteAppointment({ appointmentId }) {
         },
         // Authorization: `Bearer ${localStorage.getItem("token")}`,
       });
+      
+      window.location.href = "/patient/appointment";
 
       //   navigate("/appointment");
     } catch (error) {

@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 
@@ -88,7 +88,7 @@ export const EditAppointment = ()=> {
             </label>
             <input
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="name" type="text" placeholder="Enter your name"   onChange={(e) => setName(e.target.value)}
+                id="name" type="text" placeholder="Enter your name" value={name}  onChange={(e) => setName(e.target.value)}
                 />
         </div>
         <div class="mb-4">
@@ -97,7 +97,7 @@ export const EditAppointment = ()=> {
             </label>
             <input
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="email" type="email" placeholder="Enter your email"   onChange={(e) => setEmail(e.target.value)}
+                id="email" type="email" placeholder="Enter your email" value={email}  onChange={(e) => setEmail(e.target.value)}
                 />
         </div>
         <div class="mb-4">
@@ -106,7 +106,7 @@ export const EditAppointment = ()=> {
             </label>
             <input
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="phone" type="tel" placeholder="Enter your phone number"  onChange={(e) => setPhone(e.target.value)}
+                id="phone" type="tel" placeholder="Enter your phone number" value={phone}  onChange={(e) => setPhone(e.target.value)}
                 />
         </div>
         <div class="mb-4">
@@ -115,7 +115,7 @@ export const EditAppointment = ()=> {
             </label>
             <input
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="date" type="date" placeholder="Select a date"   onChange={(e) => setDate(e.target.value)}
+                id="date" type="date" placeholder="Select a date" value={date}    onChange={(e) => setDate(e.target.value)}
                 />
         </div>
         <div class="mb-4">
@@ -124,7 +124,7 @@ export const EditAppointment = ()=> {
             </label>
             <input
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="time" type="time" placeholder="Select a time" onChange={(e) => setTime(e.target.value)}
+                id="time" type="time" placeholder="Select a time"  value={time} onChange={(e) => setTime(e.target.value)}
                 />
         </div>
         <div class="mb-4">
@@ -133,16 +133,16 @@ export const EditAppointment = ()=> {
             </label>
             <select
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="service" name="service"  onChange={(e) => setService(e.target.value)}
+                id="service" name="service"  value={service}  onChange={(e) => setService(e.target.value)}
                 >
-                <option value="">Select a service</option>
-                <option value="haircut">General medicals</option>
-                <option value="coloring">Dental</option>
-                <option value="styling">Cardiology</option>
-                <option value="facial">Diet</option>
-                <option value="facial">Neurology</option>
-                <option value="facial">Ophthomology</option>
-                <option value="facial">Urology</option>
+                <option selected={service}>{service}</option>
+                <option value="General medicals">General medicals</option>
+                <option value="Dental">Dental</option>
+                <option value="Cardiology">Cardiology</option>
+                <option value="Diet">Diet</option>
+                <option value="Neurology">Neurology</option>
+                <option value="Ophthomology">Ophthomology</option>
+                <option value="Urology">Urology</option>
             </select>
         </div>
         <div class="mb-4">
@@ -151,16 +151,12 @@ export const EditAppointment = ()=> {
             </label>
             <select
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="service" name="service"  onChange={(e) => setHealthprofessional(e.target.value)}
+                id="service" name="service"  value={healthprofessional}  onChange={(e) => setHealthprofessional(e.target.value)}
                 >
-                <option value="">Select a doctor</option>
-                <option value="haircut">Dr. Sarah Johnson</option>
-                <option value="coloring">Dr. Michael Smith</option>
-                <option value="styling">Cardiology</option>
-                <option value="facial">Diet</option>
-                <option value="facial">Neurology</option>
-                <option value="facial">Ophthomology</option>
-                <option value="facial">Urology</option>
+                 <option selected={healthprofessional} >{healthprofessional}</option>
+                <option value="Dr. Sarah Johnson">Dr. Sarah Johnson</option>
+                <option value="Dr. Michael Smith">Dr. Michael Smith</option>
+                <option value="Dr. Michael Smith">Dr. Mercy</option>
             </select>
         </div>
         <div class="mb-4">
@@ -169,17 +165,15 @@ export const EditAppointment = ()=> {
             </label>
             <textarea
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="message" rows="4" placeholder="Enter any additional information"                  onChange={(e) => setMessage(e.target.value)}
+                id="message" rows="4" placeholder="Enter any additional information"          value={message}         onChange={(e) => setMessage(e.target.value)}
                 ></textarea>
         </div>
         <div class="flex items-center justify-center mb-4">
-           <Link to="/booking-success">
            <button
                 class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-500 focus:outline-none focus:shadow-outline"
                 type="submit">
                 Book Appointment
             </button>
-           </Link>
         </div>
 
     </form>
