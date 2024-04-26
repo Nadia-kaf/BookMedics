@@ -1,4 +1,5 @@
-import { useParams } from "react-router";
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router";
 
 
 
@@ -17,7 +18,7 @@ export const EditReview=() =>{
           );
           const data = await response.json();
     
-         setMessage(data.service);
+         setMessage(data.message);
 
         } catch (error) {
           console.log(error);

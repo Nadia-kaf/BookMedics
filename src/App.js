@@ -22,6 +22,8 @@ import {AppointmentAdd} from './pages/booking';
 import PAppointment from './pages/pappointment';
 import PatientBooking from './pages/pappointment';
 import { EditAppointment } from './components/editbooking';
+import { Review } from './components/review';
+import { EditReview } from './components/editReview';
 
 
 const router= createBrowserRouter([
@@ -43,7 +45,9 @@ const router= createBrowserRouter([
 {path:'/booking-success', element: <BookingSuccess/>},
 {path:'/checkout', element: <Checkout/>},
 {path:'/about', element: <About/>},
-{path:'/patient/appointment', element: <PatientBooking/>}
+{path:'/patient/appointment', element: <PatientBooking/>},
+{path:'/review', element: <Review/>},
+{path:'/review/:id/edit', element: <EditReview/>}
 ])
 
 function App() {
