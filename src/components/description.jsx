@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 export default function Description(){
@@ -36,8 +37,8 @@ export default function Description(){
             </path>
         </svg>
         <p>(14)</p>
-        <h5 className="pl-20 pb-5 text-md text-service font-bold">View Profile</h5>
-    </div>
+<Link to="/profile"> <h5 className="pl-20 pb-5 text-md text-service font-bold">View Profile</h5>
+</Link>    </div>
     </div>
     )
 }

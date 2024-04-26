@@ -13,7 +13,7 @@ export  const Review =()=>{
 
   // const navigate = useNavigate();
 
- const getReviews = async () => {
+ const getAllReviews = async () => {
             try {
               //   console.log(`${process.env.BACKEND_URI}/appointment`);
               const response = await fetch(`${process.env.REACT_APP_BOOKMEDICS_API}/review`);
@@ -31,7 +31,7 @@ export  const Review =()=>{
          
       
         useEffect(() => {
-          getReviews();
+          getAllReviews();
         }, []);
       
 
@@ -58,7 +58,7 @@ export  const Review =()=>{
                 </div>
 
                 <div class="flex justify-between">
-                    <span>Feb 13, 2021</span>
+                    <span>{review.createdAt.split("T")[0]}</span>
                     <div className="flex"> 
                <div><Link to={`/review/${review._id}/edit`}><MdEdit className="text-black text-xl" /></Link></div>
                <div className="ml-5"><DeleteReview     reviewId={review._id}           className="text-red-600 text-2xl cursor-pointer"/></div>

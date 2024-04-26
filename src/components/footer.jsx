@@ -3,7 +3,7 @@ import logo from "../assets/logo.png"
 export default function Footer(){
     return(
 <footer>
-    <div class="bg-deep-blue py-4 text-gray-400">
+    <div class="bg-nav-blue py-4 text-white">
       <div class="container px-4 mx-auto">
         <div class="-mx-4 flex flex-wrap justify-between">
           <div class="px-4 my-4 w-full xl:w-1/5">
@@ -14,36 +14,36 @@ export default function Footer(){
 
           <div class="px-4 my-4 w-full sm:w-auto">
             <div>
-              <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600">For Patients</h2>
+              <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-white-600">For Patients</h2>
             </div>
             <ul class="leading-8">
-              <li><a href="#" class="hover:text-blue-400">Search for doctors</a></li>
-              <li><a href="#" class="hover:text-blue-400">Login</a></li>
-              <li><a href="#" class="hover:text-blue-400">Register</a></li>
+              <li><a href="/searchS" class="hover:text-blue-400">Search for doctors</a></li>
+              <li><a href="/login" class="hover:text-blue-400">Login</a></li>
+              <li><a href="/signup" class="hover:text-blue-400">Register</a></li>
             </ul>
           </div>
           <div class="px-4 my-4 w-full sm:w-auto">
             <div>
-              <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600">For Doctors</h2>
+              <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-white-600">For Doctors</h2>
             </div>
             <ul class="leading-8">
-              <li><a href="#" class="hover:text-blue-400">Appointments</a></li>
-              <li><a href="#" class="hover:text-blue-400">login</a></li>
+              <li><a href="/booking" class="hover:text-blue-400">Appointments</a></li>
+              <li><a href="/signH" class="hover:text-blue-400">login</a></li>
             </ul>
           </div>
           <div class="px-4 my-4 w-full sm:w-auto">
             <div>
-              <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600">Contact Us</h2>
+              <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-white-600">Contact Us</h2>
             </div>
             <ul class="leading-8">
-              <li><a href="#" class="hover:text-blue-400">About Us</a></li>
+              <li><a href="/about" class="hover:text-blue-400">About Us</a></li>
               <li><a href="#" class="hover:text-blue-400">Terms &amp; Conditions</a></li>
               <li><a href="#" class="hover:text-blue-400">Privacy Policy</a></li>       
              </ul>
           </div>
           <div class="px-4 my-4 w-full sm:w-auto xl:w-1/5">
             <div>
-              <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600">Connect With Us</h2>
+              <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-white-600">Connect With Us</h2>
             </div>
             <a href="#" class="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full mr-1 hover:text-blue-400 hover:border-blue-400">
               <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">

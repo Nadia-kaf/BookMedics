@@ -24,6 +24,7 @@ import PatientBooking from './pages/pappointment';
 import { EditAppointment } from './components/editbooking';
 import { Review } from './components/review';
 import { EditReview } from './components/editReview';
+import Intro from './pages/intro';
 
 
 const router= createBrowserRouter([
@@ -47,7 +48,8 @@ const router= createBrowserRouter([
 {path:'/about', element: <About/>},
 {path:'/patient/appointment', element: <PatientBooking/>},
 {path:'/review', element: <Review/>},
-{path:'/review/:id/edit', element: <EditReview/>}
+{path:'/review/:id/edit', element: <EditReview/>},
+{path:'/welcome', element: <Intro/>}
 ])
 
 function App() {

@@ -74,8 +74,8 @@ export const EditReview=() =>{
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="message" rows="4" placeholder="Enter review" value={message}   onChange={(e) => setMessage(e.target.value)}                
                 ></textarea>
-     </form>
      <button class="rounded border-0 bg-blue-500  py-2 px-6  mb-40 text-lg text-white hover:bg-indigo-600 focus:outline-none w-20">POST</button>  
+     </form>
         
         
         </>

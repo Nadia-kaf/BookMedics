@@ -1,6 +1,6 @@
 export default function Stepss(){
     return(
-        <section id="works" class="relative bg-blue-100 py-10 sm:py-16 lg:py-24">
+        <section id="works" class="relative py-10 sm:py-16 lg:py-24">
     <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div class="max-w-2xl mx-auto text-center">
             <h2 class="text-4xl font-extrabold mx-auto md:text-6xl lg:text-5xl">How does it work?</h2>

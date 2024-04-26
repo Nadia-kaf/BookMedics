@@ -26,10 +26,11 @@ export default function About() {
 
   return (
     <>
-    <div class="sm:flex items-center max-w-screen-xl">
+    <div className=" bg-blue-100">
+    <div class="sm:flex items-center max-w-screen-xl mx-44" >
       <div class="sm:w-1/2 p-10">
         <div class="image object-center text-center">
-        <img src={school.imageUrls[currentImageIndex]} alt={school.name} className="w-full h-screen rounded-md" />
+        <img src={school.imageUrls[currentImageIndex]} alt={school.name} className="w-full rounded-md" style={{height: "450px"}} />
         </div>
       </div>
       <div class="sm:w-1/2 p-5 mt-40 mb-44">
@@ -57,6 +58,7 @@ export default function About() {
         
         </div>
       </div>
+    </div>
     </div>
     </>
   );
