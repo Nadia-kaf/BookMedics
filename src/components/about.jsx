@@ -45,9 +45,7 @@ export default function About() {
             </span>
           </h2>
           <p class="text-gray-700">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid,
-            commodi doloremque, fugiat illum magni minus nisi nulla numquam
-            obcaecati placeat quia, repellat tempore voluptatum.
+           This Facility is well equipped with recent medical technologies, machineries and experienced medical Staff. Guess what? We are one of the best awarded Hospitals in Ghana for offering exquisit medical care.
           </p>
 
         

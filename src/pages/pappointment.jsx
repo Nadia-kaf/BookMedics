@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { RotatingLines } from "react-loader-spinner";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import DeleteAppointment from "../components/deletebooking";
-import { MdDelete, MdEdit } from "react-icons/md";
+import {  MdEdit } from "react-icons/md";
 
 
 
@@ -48,13 +48,9 @@ export default function PatientBooking() {
           </div>
 
           <div className="mt-8 text-center">
-            <img
-              src="https://tailus.io/sources/blocks/stats-cards/preview/images/second_user.webp"
-              alt=""
-              className="w-10 h-10 m-auto rounded-full object-cover lg:w-28 lg:h-28"
-            />
+            <h1  className="text-5xl mx-auto my-auto border text-center rounded-full bg-red-500 p-12">N</h1>
             <h5 className="hidden mt-4 text-xl font-semibold text-gray-600 lg:block">
-              Cynthia J. Watts
+              Nadia  Kafui
             </h5>
             <span className="hidden text-gray-400 lg:block">
               Patient ID: 12222
@@ -270,7 +266,7 @@ export default function PatientBooking() {
           </div>
         </div>
 
-        <div className="px-6 pt-6 2xl:container">
+        <div className="px-6 pt-6 2xl:container ">
           <div className="flex justify-end mt-5 mr-20 motion-reduce:animate-bounce">
             <Link
               to="/booking"
@@ -304,7 +300,7 @@ export default function PatientBooking() {
       ) : (
 
 
-          <table class="min-w-full divide-y divide-gray-200 overflow-x-auto">
+          <table class="min-w-full divide-y divide-gray-200 overflow-x-auto mt-10">
             <thead class="bg-gray-50">
               <tr>
                 <th

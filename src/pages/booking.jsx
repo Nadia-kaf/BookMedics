@@ -53,7 +53,7 @@ export const AppointmentAdd = ()=> {
 
     return(
     <div  className="flex justify-center" style={{ backgroundImage: `url(${pik})`, backgroundSize: 'cover', backgroundPosition: 'center', height:"100%", width: "100%"}}>
-     <div class="mx-52   my-20 w-full h-full bg-slate-200 rounded-lg " >
+     <div class="mx-52   my-20 w-[600px] h-[900px] px-20 p-10 bg-slate-200 rounded-lg " >
       <form class=" px-6  "  onSubmit={onSubmitHandler}>
         <div class="mb-4">
             <label class="block text-gray-700 font-bold mb-2" for="name">
