@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import reception from "../assets/recption.jpg"
 import { useState } from "react";
+import pik from "../assets/hand-cupping-stethoscope-health-concept.jpg";
 
 export default function SignUp() {
 
@@ -56,75 +57,64 @@ export default function SignUp() {
 
 
 
-
   return (
       <>
-         <div
-    class="flex font-poppins items-center justify-center dark:bg-gray-900 min-w-screen min-h-screen"
-  >
-    <div class="grid gap-8">
-      <div
-        id="back-div"
-        class="bg-gradient-to-r from-blue-500 to-deep-blue rounded-[26px] m-4 "
-      >
-        <div
-          class="border-[20px] border-transparent rounded-[20px] dark:bg-gray-900 bg-white shadow-lg xl:p-10 2xl:p-10 lg:p-10 md:p-10 sm:p-2 m-2"
-        >
-          <h1 class="pt-8 pb-6 font-bold text-3xl dark:text-gray-400 text-center cursor-default">
-           Register          </h1>
-          <form action="#" method="post" class="space-y-4" onSubmit={handleSubmit}>
-            <div>
-              <label for="name" class="mb-2 dark:text-gray-400 text-lg">Full Name</label>
-              <input
-                id="name"
-                class="border dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 p-3 shadow-md placeholder:text-base border-gray-300 rounded-lg w-full focus:scale-105 ease-in-out duration-300"
-                type="name"
+
+<div className="min-h-screen   flex flex-col justify-center sm:py-12"     style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),url(${pik})`, backgroundSize: 'cover', backgroundPosition: 'center', height:"280px" }}
+>
+       <div class="relative py-3 lg:ml-40 sm:max-w-xl sm:mx-auto">
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-cyan-400 to-deep-blue shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl">
+    </div>
+    <div class="relative px-6 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-10">
+
+      <div class="max-w-md mx-auto px-10">
+        <div>
+          <h1 class="text-2xl font-semibold">Register </h1>
+        </div>
+        <form action=""  method="post" onSubmit={handleSubmit}>
+
+        <div class="divide-y divide-gray-200">
+          <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
+            <div class="relative">
+              <input autocomplete="off" id="name" name="email"  class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"  type="name"
                 placeholder="Full name"
-                value={fullName} onChange={(e) => setFullName(e.target.value)}
-                
-              />
+                value={fullName} onChange={(e) => setFullName(e.target.value)}/>
+              <label for="email" class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Full Name</label>
             </div>
-            <div>
-              <label for="email" class="mb-2 dark:text-gray-400 text-lg">Email</label>
-              <input
-                id="email"
-                class="border dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 p-3 shadow-md placeholder:text-base border-gray-300 rounded-lg w-full focus:scale-105 ease-in-out duration-300"
-                type="email"
-                placeholder="Email"
+           
+            <div class="relative">
+              <input autocomplete="off" id="email" name="email"  class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Email address"  type="email"
                 required
-                value={email} onChange={(e) => setEmail(e.target.value)}
-              />
+                value={email} onChange={(e) => setEmail(e.target.value)} />
+
+              <label for="email" class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Email Address</label>
             </div>
-            <div>
-              <label for="password" class="mb-2 dark:text-gray-400 text-lg">Password</label>
-              <input
-                id="password"
-                class="border dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 p-3 mb-2 shadow-md placeholder:text-base border-gray-300 rounded-lg w-full focus:scale-105 ease-in-out duration-300"
-                type="password"
-                placeholder="Password"
-                required
-                value={password} onChange={(e) => setPassword(e.target.value)}
-              />
+            <div className="mt-10 flex space-x-20">
+            <div class="relative">
+              <input autocomplete="off" id="password" name="password" type="password" class="peer placeholder-transparent h-10 w-32 border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Password" required
+                value={password} onChange={(e) => setPassword(e.target.value)}/>
+              <label for="password" class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Password</label>
             </div>
-            <div>
-              <label for="password" class="mb-2 dark:text-gray-400 text-lg"> Confirm Password</label>
-              <input
-                id="password"
-                class="border dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 p-3 mb-2 shadow-md placeholder:text-base border-gray-300 rounded-lg w-full focus:scale-105 ease-in-out duration-300"
-                type="password"
-                placeholder="Password"
-                required
-                value={password} onChange={(e) => setConfirmPassword(e.target.value)} 
-              />
+            <div class="relative">
+              <input autocomplete="off" id="password" name="password" type="password" class="peer placeholder-transparent h-10 w-36 border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Password" required value={password} onChange={(e) => setConfirmPassword(e.target.value)} />
+              <label for="password" class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Confirm Password**</label>
             </div>
-               <button
-              class="bg-gradient-to-r from-blue-500 to-purple-500 shadow-lg mt-6 p-2 text-white rounded-lg w-full hover:scale-105 hover:from-purple-500 hover:to-blue-500 transition duration-300 ease-in-out"
+            </div>
+            <div class="relative">
+            <button
+              class="bg-cyan-500 text-white rounded-md px-2 py-1 text-sm mt-10"
               type="submit"
             >
               SIGN UP
             </button>
-          </form>
-          <div class="flex flex-col mt-4 items-center justify-center text-sm">
+            </div>
+          </div>
+        </div>
+        </form>
+
+      </div>
+      <div class="flex flex-col mt-4 items-center justify-center text-sm">
             <h3>
               <span class="cursor-default dark:text-gray-300">Have an account?</span>
               <a
@@ -139,8 +129,6 @@ export default function SignUp() {
               </a>
             </h3>
           </div>
-
-         
           <div
             class="text-gray-500 flex text-center flex-col mt-4 items-center text-sm"
           >
@@ -169,10 +157,10 @@ export default function SignUp() {
               </a>
             </p>
           </div>
-        </div>
-      </div>
+
     </div>
   </div>
+</div>
 </>
   );
 }

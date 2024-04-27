@@ -2,9 +2,9 @@ export default function Overview(){
     return(
        <section>
            <div className="max-w-4xl mx-auto p-6 bg-white shadow-md">
-      <h1 className="text-2xl text-blue-800 font-semibold">About Dr. Jane Smith</h1>
+      <h1 className="text-2xl text-blue-800 font-semibold">About me</h1>
       <p className="mt-4">
-        Hello! I'm Dr. Jane Smith, a board-certified family physician with over 15 years of experience in providing comprehensive health care to patients of all ages. I'm dedicated to fostering long-lasting relationships with my patients and their families, helping to navigate their health journey with empathy and expertise.
+        Hello! I'm a board-certified family physician with over 15 years of experience in providing comprehensive health care to patients of all ages. I'm dedicated to fostering long-lasting relationships with my patients and their families, helping to navigate their health journey with empathy and expertise.
       </p>
 
       <h2 className="mt-6 text-xl text-blue-700">Background</h2>

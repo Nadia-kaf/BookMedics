@@ -14,31 +14,31 @@ export default function Stepss(){
             <div class="relative grid grid-cols-1 text-center gap-y-12 md:grid-cols-3 gap-x-12">
                 <div>
                     <div
-                        class="flex items-center justify-center w-16 h-16 mx-auto bg-rose-400 border-2 border-gray-200 rounded-full shadow">
+                        class="flex items-center justify-center w-16 h-16 mx-auto bg-blue-200 border-2 border-gray-200 rounded-full shadow">
                         <span class="text-xl font-semibold text-gray-700">1</span>
                     </div>
                     <h3 class="mt-6 text-xl   font-semibold leading-tight md:mt-10">Search Health Professional</h3>
-                    <p class="mt-4 text-base text-gray-800 md:text-lg border rounded-md bg-white shadow p-5 border-amber-800">
+                    <p class="mt-4 text-base text-gray-800 md:text-lg border rounded-md bg-white shadow p-5 border-white">
                         Select Health Professionals according to your medical needs. If you have no idea of your medical needs, feel free to consult with a general medical practitioner.
                     </p>
                 </div>
                 <div>
                     <div
-                        class="flex items-center justify-center w-16 h-16 mx-auto bg-yellow-400 border-2 border-gray-200 rounded-full shadow">
+                        class="flex items-center justify-center w-16 h-16 mx-auto bg-blue-400 border-2 border-gray-200 rounded-full shadow">
                         <span class="text-xl font-semibold">2</span>
                     </div>
                     <h3 class="mt-6 text-xl font-semibold leading-tight md:mt-10">Check profile</h3>
-                    <p class="mt-4 text-base text-gray-800 md:text-lg border rounded-md bg-white shadow p-5 border-yellow-800">
+                    <p class="mt-4 text-base text-gray-800 md:text-lg border rounded-md bg-white shadow p-5 border-white">
                         Go to profiles of Health Professionals to know more about them and leave a review if you are a verified client.
                     </p>
                 </div>
                 <div>
                     <div
-                        class="flex items-center justify-center w-16 h-16 mx-auto bg-green-400 border-2 border-gray-200 rounded-full shadow">
+                        class="flex items-center justify-center w-16 h-16 mx-auto bg-blue-600 border-2 border-gray-200 rounded-full shadow">
                         <span class="text-xl font-semibold ">3</span>
                     </div>
                     <h3 class="mt-6 text-xl  font-semibold leading-tight md:mt-10">Book appointment</h3>
-                    <p class="mt-4 text-base text-gray-800 md:text-lg border rounded-md bg-white shadow p-5 border-green-800">
+                    <p class="mt-4 text-base text-gray-800 md:text-lg border rounded-md bg-white shadow p-5 border-white">
                         You can proceed to book consultation session with your Health Professional.
                     </p>
                 </div>

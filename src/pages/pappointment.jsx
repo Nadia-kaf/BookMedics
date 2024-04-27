@@ -3,6 +3,7 @@ import { RotatingLines } from "react-loader-spinner";
 import { Link } from "react-router-dom";
 import DeleteAppointment from "../components/deletebooking";
 import {  MdEdit } from "react-icons/md";
+import logo from "../assets/logo.png"
 
 
 
@@ -41,13 +42,7 @@ export default function PatientBooking() {
       {/* <!-- component --> */}
       <aside className="ml-[-100%] fixed z-10 top-0 pb-3 px-6 w-full flex flex-col justify-between h-screen border-r bg-white transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%]">
         <div>
-          <div className="-mx-6 px-6 py-4">
-            <Link to="/">
-              <img src="" className="w-32" alt=" logo" />
-            </Link>
-          </div>
-
-          <div className="mt-8 text-center">
+        <div className="mt-8 text-center">
             <h1  className="text-5xl mx-auto my-auto border text-center rounded-full bg-red-500 p-12">N</h1>
             <h5 className="hidden mt-4 text-xl font-semibold text-gray-600 lg:block">
               Nadia  Kafui
@@ -184,7 +179,7 @@ export default function PatientBooking() {
         </div>
       </aside>
       <div className="ml-auto mb-6 lg:w-[75%] xl:w-[80%] 2xl:w-[85%]">
-        <div className="sticky z-10 top-0 h-16 border-b bg-white lg:py-2.5">
+        <div className="sticky z-10 top-0 h-16 border-b bg-foot-blue lg:py-2.5">
           <div className="px-6 flex items-center justify-between space-x-4 2xl:container">
             <h5 hidden className="text-2xl text-gray-600 font-medium lg:block">
               Appointment
@@ -267,25 +262,7 @@ export default function PatientBooking() {
         </div>
 
         <div className="px-6 pt-6 2xl:container ">
-          <div className="flex justify-end mt-5 mr-20 motion-reduce:animate-bounce">
-            <Link
-              to="/booking"
-              className="flex items-center text-white w-62 border border-blue-700 bg-blue-700 py-2 px-3 gap-2 rounded-md "
-            >
-              <span>Add Appointment</span>
-              <svg
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                className="w-6 h-6"
-              >
-                <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-              </svg>
-            </Link>
-          </div>
+         
          
           {loading === true ? (
         <div className="flex justify-center items-center h-screen">
@@ -394,6 +371,26 @@ export default function PatientBooking() {
           </table>
            )}
         </div>
+
+        <div className="flex justify-end mt-5 mr-20 motion-reduce:animate-bounce">
+            <Link
+              to="/booking"
+              className="flex items-center text-white w-62 border border-blue-700 bg-blue-700 py-2 px-3 gap-2 rounded-md "
+            >
+              <span>Add Appointment</span>
+              <svg
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                className="w-6 h-6"
+              >
+                <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </Link>
+          </div>
         
       </div>
      
