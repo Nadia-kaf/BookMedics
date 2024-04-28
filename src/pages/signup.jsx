@@ -102,12 +102,12 @@ export default function SignUp() {
             </div>
             </div>
             <div class="relative">
-            <button
+            <Link to="/searchS"><button
               class="bg-cyan-500 text-white rounded-md px-2 py-1 text-sm mt-10"
               type="submit"
             >
               SIGN UP
-            </button>
+            </button></Link>
             </div>
           </div>
         </div>
