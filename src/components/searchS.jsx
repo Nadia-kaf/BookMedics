@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import dotors from "../assets/doctors.png"
 import { healthproviders } from "../pages/jsondata/doctors";
+import Profile from "../pages/profile";
 
 
 export default function SearchServices() {
@@ -19,6 +20,8 @@ export default function SearchServices() {
 
 
   return (
+      <>   
+      <Profile healthproviders={healthproviders} />   
     <div class="bg-white">
       <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className=" " style={{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${dotors})`, height:" 230px", weight: "1800px"}}>
@@ -216,7 +219,8 @@ export default function SearchServices() {
             {/* Display filtered doctors */}
             <div class="lg:col-span-3">
                              
-                 {filteredHealthproviders.map((healthproviders) => (
+                 {filteredHealthproviders.map((healthproviders) => {
+                  return(
                    <div className="grid grid-cols-2 gap-9 border rounded-xl p-5 min-w-96 mt-5">
 
 <div className="flex">  
@@ -288,16 +292,20 @@ export default function SearchServices() {
                            <h2 className="ml-3">$50-$100</h2>
          
                   </div>
-                  <button className="border rounded-xl bg-blue-500 py-2 px-6 text-sm text-white mt-2 "><Link to="/profile">View Profile</Link></button>
+
+                   <Link to={`/profile/${healthproviders.id}`}>
+                  <button className="border rounded-xl bg-blue-500 py-2 px-6 text-sm text-white mt-2 ">View Profile</button></Link>
                   <br />
                   <Link to="/booking"><button className="border rounded-xl text-sm bg-blue-500 py-2 px-5 text-white mt-5">Book Appointment</button></Link>
                 </div>
               </div>
-                ))}
+              );
+})}
               </div>
           </div>
         </section>
       </main>
     </div>
+    </>
   );
 }

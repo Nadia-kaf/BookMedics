@@ -1,5 +1,5 @@
 import dpic from "../assets/dpic.png";
-import React from "react";
+import React, { useState } from "react";
 import {
   Tabs,
   TabsHeader,
@@ -11,11 +11,19 @@ import Footer from "../components/footer";
 import Overview from "../components/overview";
 import { Review } from "../components/review";
 import Location from "../components/location";
-import { Link } from "react-router-dom";
-import { healthproviders } from "./jsondata/doctors";
+import { Link, useParams } from "react-router-dom";
+import { healthproviders } from "./jsondata/doctors.jsx";
 import BusinessHours from "../components/businesshours";
 
 export default function Profile() {
+
+    const {id} = useParams();
+
+   
+  
+
+
+
   const [activeTab, setActiveTab] = React.useState("html");
   const data = [
     {
@@ -39,19 +47,27 @@ export default function Profile() {
       desc: <BusinessHours/>
     },
   ];
+
+  const healthprovider = healthproviders.find((healthprovider) => healthprovider.id.toString() === id);
+
+  if (!healthprovider){
+    return <div>Health Professsional not found</div>
+   }
+  
+
   return (
     <>
       <section>
         <div className="grid grid-cols-2 gap-9 border rounded-xl p-5 mx-40 mt-20">
           <div className="flex">
             <div>
-              <img src={dpic} alt="doctor's pic" />
+              <img src={healthprovider.image} alt="doctor's pic" />
             </div>
             <div className="ml-10">
-              <h3>Doctor's name</h3>
-              <h4>profession</h4>
+              <h3>{healthprovider.name}</h3>
+              <h4>{healthprovider.gender}</h4>
 
-              <p>Specialist service</p>
+              <p>{healthprovider.specialty}</p>
               <div class="space-x-1 flex justify-center mt-3">
                 <svg
                   class="w-4 h-4 mx-px fill-current text-orange-600"
