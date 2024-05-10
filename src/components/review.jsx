@@ -13,6 +13,7 @@ export  const Review =()=>{
 
   // const navigate = useNavigate();
 
+  
  const getAllReviews = async () => {
             try {
               //   console.log(`${process.env.BACKEND_URI}/appointment`);
@@ -47,8 +48,8 @@ export  const Review =()=>{
                 {/* <!-- Profile and Rating --> */}
                 <div class="flex justify justify-between">
                     <div class="flex gap-2">
-                        <div class="w-7 h-7 text-center rounded-full bg-red-500">J</div>
-                        <span>Jess Hopkins</span>
+                        <div class="w-7 h-7 text-center rounded-full bg-red-500">N</div>
+                        <span>Nadia Kafui</span>
                     </div>
                    
                 </div>

@@ -44,8 +44,8 @@ const slides = [
 
     <div class="grid grid-cols-2 ">
         <div class="w-96">
-           <h1 className="text-3xl text-service font-bold">Book our doctors</h1>
-           <p className="mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero rem possimus illum blanditiis! Enim minus veniam ducimus ut, vitae molestiae ea voluptate eligendi similique nisi amet modi, magnam commodi aspernatur!</p>
+           <h1 className="text-3xl text-service font-bold">Book our Health Professionals</h1>
+           <p className="mt-5">We care about your health and time. Our Health Professionals provide quality health care services beyond expectations and aim to establish relationships with clients.</p>
         </div>
     
 

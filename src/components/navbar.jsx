@@ -45,6 +45,9 @@ export default function Navbar(){
        <Link to="/contact"> <li className="flex items-center gap-1 text-sm font-medium hover:underline" href="/contact">
           Contact Us
         </li></Link>
+       <Link to="/signupH"> <li className="flex items-center gap-6 ml-20 text-sm text-deep-blue font-medium hover:underline">
+          Are you a health professional?
+        </li></Link>
       </ul>
     
     </nav>

@@ -17,7 +17,7 @@ export const ReviewAdd = ()=> {
           };
       
           try {
-              const response = await fetch(`http://localhost:4000/review`, {
+              const response = await fetch(`https://bookmedics-api.onrender.com/review`, {
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json",

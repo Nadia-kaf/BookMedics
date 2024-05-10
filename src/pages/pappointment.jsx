@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { RotatingLines } from "react-loader-spinner";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import DeleteAppointment from "../components/deletebooking";
-import { MdDelete, MdEdit } from "react-icons/md";
+import {  MdEdit } from "react-icons/md";
+import logo from "../assets/logo.png"
 
 
 
@@ -41,20 +42,10 @@ export default function PatientBooking() {
       {/* <!-- component --> */}
       <aside className="ml-[-100%] fixed z-10 top-0 pb-3 px-6 w-full flex flex-col justify-between h-screen border-r bg-white transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%]">
         <div>
-          <div className="-mx-6 px-6 py-4">
-            <Link to="/">
-              <img src="" className="w-32" alt=" logo" />
-            </Link>
-          </div>
-
-          <div className="mt-8 text-center">
-            <img
-              src="https://tailus.io/sources/blocks/stats-cards/preview/images/second_user.webp"
-              alt=""
-              className="w-10 h-10 m-auto rounded-full object-cover lg:w-28 lg:h-28"
-            />
+        <div className="mt-8 text-center">
+            <h1  className="text-5xl mx-auto my-auto border text-center rounded-full bg-red-500 p-12">N</h1>
             <h5 className="hidden mt-4 text-xl font-semibold text-gray-600 lg:block">
-              Cynthia J. Watts
+              Nadia  Kafui
             </h5>
             <span className="hidden text-gray-400 lg:block">
               Patient ID: 12222
@@ -188,7 +179,7 @@ export default function PatientBooking() {
         </div>
       </aside>
       <div className="ml-auto mb-6 lg:w-[75%] xl:w-[80%] 2xl:w-[85%]">
-        <div className="sticky z-10 top-0 h-16 border-b bg-white lg:py-2.5">
+        <div className="sticky z-10 top-0 h-16 border-b bg-foot-blue lg:py-2.5">
           <div className="px-6 flex items-center justify-between space-x-4 2xl:container">
             <h5 hidden className="text-2xl text-gray-600 font-medium lg:block">
               Appointment
@@ -270,26 +261,8 @@ export default function PatientBooking() {
           </div>
         </div>
 
-        <div className="px-6 pt-6 2xl:container">
-          <div className="flex justify-end mt-5 mr-20 motion-reduce:animate-bounce">
-            <Link
-              to="/booking"
-              className="flex items-center text-white w-62 border border-blue-700 bg-blue-700 py-2 px-3 gap-2 rounded-md "
-            >
-              <span>Add Appointment</span>
-              <svg
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                className="w-6 h-6"
-              >
-                <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-              </svg>
-            </Link>
-          </div>
+        <div className="px-6 pt-6 2xl:container ">
+         
          
           {loading === true ? (
         <div className="flex justify-center items-center h-screen">
@@ -304,7 +277,7 @@ export default function PatientBooking() {
       ) : (
 
 
-          <table class="min-w-full divide-y divide-gray-200 overflow-x-auto">
+          <table class="min-w-full divide-y divide-gray-200 overflow-x-auto mt-10">
             <thead class="bg-gray-50">
               <tr>
                 <th
@@ -398,6 +371,26 @@ export default function PatientBooking() {
           </table>
            )}
         </div>
+
+        <div className="flex justify-end mt-5 mr-20 motion-reduce:animate-bounce">
+            <Link
+              to="/booking"
+              className="flex items-center text-white w-62 border border-blue-700 bg-blue-700 py-2 px-3 gap-2 rounded-md "
+            >
+              <span>Add Appointment</span>
+              <svg
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                className="w-6 h-6"
+              >
+                <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </Link>
+          </div>
         
       </div>
      
