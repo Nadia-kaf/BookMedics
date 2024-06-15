@@ -21,7 +21,7 @@ export default function SearchServices() {
 
   return (
       <>   
-      <Profile healthproviders={healthproviders} />   
+      
     <div class="bg-white">
       <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className=" " style={{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${dotors})`, height:" 230px", weight: "1800px"}}>

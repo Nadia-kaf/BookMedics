@@ -19,7 +19,7 @@ export default function Hero() {
 
   return (
     <div
-      className="flex"
+      className="md:flex-1 lg:flex"
       style={{
         backgroundImage: `url(${hero})`,
         backgroundSize: "cover",
@@ -27,7 +27,7 @@ export default function Hero() {
         height: "540px",
       }}
     >
-      <div className="mx-auto ml-36 mt-40">
+      <div className="lg:mx-auto ml-10 lg:ml-36 lg:mt-40">
         <h1 className="text-5xl text-white">
           Consultation with the{" "}
           
@@ -66,12 +66,12 @@ Start right away by clicking on the button below.        </p>
           <p>Regular Checkup</p>
         </div> */}
 
-      <div>
+      <div >
         <div className="ml-20">
           <img src={doc} alt="doctor" className="w-full h-96 mt-10 mr-52 " />
         </div>
 
-        <div className="border rounded-xl  bg-white w-80 p-1 ml-44 animate-bounce mb-10">
+        <div className="border rounded-xl  bg-white w-80 p-1 lg:ml-44 animate-bounce mb-10">
           <h5 className="p-2">Meet our doctors</h5>
           <div class="flex ">
             <img
